@@ -1,0 +1,248 @@
+
+> inci-site@0.1.0 dev
+> next dev
+
+▲ Next.js 16.2.7 (Turbopack)
+- Local:         http://localhost:3000
+- Network:       http://192.168.88.202:3000
+✓ Ready in 1035ms
+⚠ Warning: Next.js inferred your workspace root, but it may not be correct.
+ We detected multiple lockfiles and selected the directory of C:\Users\tHi\Downloads\New Site\package-lock.json as the root directory.
+ To silence this warning, set `turbopack.root` in your Next.js config, or consider removing one of the lockfiles if it's not needed.
+   See https://nextjs.org/docs/app/api-reference/config/next-config-js/turbopack#root-directory for more information.
+ Detected additional lockfiles: 
+   * C:\Users\tHi\Downloads\New Site\inci-site\package-lock.json
+
+
+ GET / 200 in 854ms (next.js: 451ms, application-code: 403ms)
+✓ Compiled in 99ms
+[browser] The final argument passed to useEffect changed size between renders. The order and size of this array must remain constant.
+
+Previous: []
+Incoming: [blue] 
+    at areHookInputsEqual (file://C:/Users/tHi/Downloads/New Site/inci-site/.next/dev/static/chunks/1fhl_next_dist_compiled_react-dom_0bydd4-._.js:4604:56)
+    at updateEffectImpl (file://C:/Users/tHi/Downloads/New Site/inci-site/.next/dev/static/chunks/1fhl_next_dist_compiled_react-dom_0bydd4-._.js:5300:50)
+    at Object.useEffect (file://C:/Users/tHi/Downloads/New Site/inci-site/.next/dev/static/chunks/1fhl_next_dist_compiled_react-dom_0bydd4-._.js:15568:13)
+    at <unknown> (file://C:/Users/tHi/Downloads/New Site/inci-site/.next/dev/static/chunks/1fhl_next_dist_compiled_0isrqw6._.js:1722:36)
+    at CTAButton (file://C:/Users/tHi/Downloads/New Site/inci-site/.next/dev/static/chunks/inci-site_src_0l55gxp._.js?id=%255Bproject%255D%252Finci-site%252Fsrc%252Fcomponents%252FCTAButton.tsx+%255Bapp-client%255D+%2528ecmascript%2529:26:196)
+    at Object.react_stack_bottom_frame (file://C:/Users/tHi/Downloads/New Site/inci-site/.next/dev/static/chunks/1fhl_next_dist_compiled_react-dom_0bydd4-._.js:15037:24)
+    at renderWithHooksAgain (file://C:/Users/tHi/Downloads/New Site/inci-site/.next/dev/static/chunks/1fhl_next_dist_compiled_react-dom_0bydd4-._.js:4675:24)
+    at renderWithHooks (file://C:/Users/tHi/Downloads/New Site/inci-site/.next/dev/static/chunks/1fhl_next_dist_compiled_react-dom_0bydd4-._.js:4626:28)
+    at updateFunctionComponent (file://C:/Users/tHi/Downloads/New Site/inci-site/.next/dev/static/chunks/1fhl_next_dist_compiled_react-dom_0bydd4-._.js:6081:21)
+    at beginWork (file://C:/Users/tHi/Downloads/New Site/inci-site/.next/dev/static/chunks/1fhl_next_dist_compiled_react-dom_0bydd4-._.js:6691:24)
+    at runWithFiberInDEV (file://C:/Users/tHi/Downloads/New Site/inci-site/.next/dev/static/chunks/1fhl_next_dist_compiled_react-dom_0bydd4-._.js:965:74)
+    at performUnitOfWork (file://C:/Users/tHi/Downloads/New Site/inci-site/.next/dev/static/chunks/1fhl_next_dist_compiled_react-dom_0bydd4-._.js:9555:97)
+    at workLoopSync (file://C:/Users/tHi/Downloads/New Site/inci-site/.next/dev/static/chunks/1fhl_next_dist_compiled_react-dom_0bydd4-._.js:9449:40)
+    at renderRootSync (file://C:/Users/tHi/Downloads/New Site/inci-site/.next/dev/static/chunks/1fhl_next_dist_compiled_react-dom_0bydd4-._.js:9433:13)
+    at performWorkOnRoot (file://C:/Users/tHi/Downloads/New Site/inci-site/.next/dev/static/chunks/1fhl_next_dist_compiled_react-dom_0bydd4-._.js:9061:186)
+    at performSyncWorkOnRoot (file://C:/Users/tHi/Downloads/New Site/inci-site/.next/dev/static/chunks/1fhl_next_dist_compiled_react-dom_0bydd4-._.js:10263:9)
+    at flushSyncWorkAcrossRoots_impl (file://C:/Users/tHi/Downloads/New Site/inci-site/.next/dev/static/chunks/1fhl_next_dist_compiled_react-dom_0bydd4-._.js:10179:316)
+    at flushSyncWork$1 (file://C:/Users/tHi/Downloads/New Site/inci-site/.next/dev/static/chunks/1fhl_next_dist_compiled_react-dom_0bydd4-._.js:9230:86)
+    at Object.scheduleRefresh (file://C:/Users/tHi/Downloads/New Site/inci-site/.next/dev/static/chunks/1fhl_next_dist_compiled_react-dom_0bydd4-._.js:299:13)
+    at <unknown> (file://C:/Users/tHi/Downloads/New Site/inci-site/.next/dev/static/chunks/1fhl_next_dist_compiled_0isrqw6._.js:391:33)
+    at Set.forEach (<anonymous>)
+    at Object.performReactRefresh (file://C:/Users/tHi/Downloads/New Site/inci-site/.next/dev/static/chunks/1fhl_next_dist_compiled_0isrqw6._.js:384:38)
+    at applyUpdate (file://C:/Users/tHi/Downloads/New Site/inci-site/.next/dev/static/chunks/1fhl_next_dist_compiled_0isrqw6._.js:878:31)
+    at <unknown> (file://C:/Users/tHi/Downloads/New Site/inci-site/.next/dev/static/chunks/1fhl_next_dist_compiled_0isrqw6._.js:886:13) (file://C:/Users/tHi/Downloads/New Site/inci-site/.next/dev/static/chunks/1fhl_next_dist_compiled_react-dom_0bydd4-._.js:4604:56)
+[browser] The final argument passed to useEffect changed size between renders. The order and size of this array must remain constant.
+
+Previous: []
+Incoming: [blue] 
+    at areHookInputsEqual (file://C:/Users/tHi/Downloads/New Site/inci-site/.next/dev/static/chunks/1fhl_next_dist_compiled_react-dom_0bydd4-._.js:4604:56)
+    at updateEffectImpl (file://C:/Users/tHi/Downloads/New Site/inci-site/.next/dev/static/chunks/1fhl_next_dist_compiled_react-dom_0bydd4-._.js:5300:50)
+    at Object.useEffect (file://C:/Users/tHi/Downloads/New Site/inci-site/.next/dev/static/chunks/1fhl_next_dist_compiled_react-dom_0bydd4-._.js:15568:13)
+    at <unknown> (file://C:/Users/tHi/Downloads/New Site/inci-site/.next/dev/static/chunks/1fhl_next_dist_compiled_0isrqw6._.js:1722:36)
+    at CTAButton (file://C:/Users/tHi/Downloads/New Site/inci-site/.next/dev/static/chunks/inci-site_src_0l55gxp._.js?id=%255Bproject%255D%252Finci-site%252Fsrc%252Fcomponents%252FCTAButton.tsx+%255Bapp-client%255D+%2528ecmascript%2529:26:196)
+    at Object.react_stack_bottom_frame (file://C:/Users/tHi/Downloads/New Site/inci-site/.next/dev/static/chunks/1fhl_next_dist_compiled_react-dom_0bydd4-._.js:15037:24)
+    at renderWithHooksAgain (file://C:/Users/tHi/Downloads/New Site/inci-site/.next/dev/static/chunks/1fhl_next_dist_compiled_react-dom_0bydd4-._.js:4675:24)
+    at renderWithHooks (file://C:/Users/tHi/Downloads/New Site/inci-site/.next/dev/static/chunks/1fhl_next_dist_compiled_react-dom_0bydd4-._.js:4626:28)
+    at updateFunctionComponent (file://C:/Users/tHi/Downloads/New Site/inci-site/.next/dev/static/chunks/1fhl_next_dist_compiled_react-dom_0bydd4-._.js:6081:21)
+    at beginWork (file://C:/Users/tHi/Downloads/New Site/inci-site/.next/dev/static/chunks/1fhl_next_dist_compiled_react-dom_0bydd4-._.js:6691:24)
+    at runWithFiberInDEV (file://C:/Users/tHi/Downloads/New Site/inci-site/.next/dev/static/chunks/1fhl_next_dist_compiled_react-dom_0bydd4-._.js:965:74)
+    at performUnitOfWork (file://C:/Users/tHi/Downloads/New Site/inci-site/.next/dev/static/chunks/1fhl_next_dist_compiled_react-dom_0bydd4-._.js:9555:97)
+    at workLoopSync (file://C:/Users/tHi/Downloads/New Site/inci-site/.next/dev/static/chunks/1fhl_next_dist_compiled_react-dom_0bydd4-._.js:9449:40)
+    at renderRootSync (file://C:/Users/tHi/Downloads/New Site/inci-site/.next/dev/static/chunks/1fhl_next_dist_compiled_react-dom_0bydd4-._.js:9433:13)
+    at performWorkOnRoot (file://C:/Users/tHi/Downloads/New Site/inci-site/.next/dev/static/chunks/1fhl_next_dist_compiled_react-dom_0bydd4-._.js:9061:186)
+    at performSyncWorkOnRoot (file://C:/Users/tHi/Downloads/New Site/inci-site/.next/dev/static/chunks/1fhl_next_dist_compiled_react-dom_0bydd4-._.js:10263:9)
+    at flushSyncWorkAcrossRoots_impl (file://C:/Users/tHi/Downloads/New Site/inci-site/.next/dev/static/chunks/1fhl_next_dist_compiled_react-dom_0bydd4-._.js:10179:316)
+    at flushSyncWork$1 (file://C:/Users/tHi/Downloads/New Site/inci-site/.next/dev/static/chunks/1fhl_next_dist_compiled_react-dom_0bydd4-._.js:9230:86)
+    at Object.scheduleRefresh (file://C:/Users/tHi/Downloads/New Site/inci-site/.next/dev/static/chunks/1fhl_next_dist_compiled_react-dom_0bydd4-._.js:299:13)
+    at <unknown> (file://C:/Users/tHi/Downloads/New Site/inci-site/.next/dev/static/chunks/1fhl_next_dist_compiled_0isrqw6._.js:391:33)
+    at Set.forEach (<anonymous>)
+    at Object.performReactRefresh (file://C:/Users/tHi/Downloads/New Site/inci-site/.next/dev/static/chunks/1fhl_next_dist_compiled_0isrqw6._.js:384:38)
+    at applyUpdate (file://C:/Users/tHi/Downloads/New Site/inci-site/.next/dev/static/chunks/1fhl_next_dist_compiled_0isrqw6._.js:878:31)
+    at <unknown> (file://C:/Users/tHi/Downloads/New Site/inci-site/.next/dev/static/chunks/1fhl_next_dist_compiled_0isrqw6._.js:886:13) (file://C:/Users/tHi/Downloads/New Site/inci-site/.next/dev/static/chunks/1fhl_next_dist_compiled_react-dom_0bydd4-._.js:4604:56)
+[browser] The final argument passed to useEffect changed size between renders. The order and size of this array must remain constant.
+
+Previous: []
+Incoming: [gray] 
+    at areHookInputsEqual (file://C:/Users/tHi/Downloads/New Site/inci-site/.next/dev/static/chunks/1fhl_next_dist_compiled_react-dom_0bydd4-._.js:4604:56)
+    at updateEffectImpl (file://C:/Users/tHi/Downloads/New Site/inci-site/.next/dev/static/chunks/1fhl_next_dist_compiled_react-dom_0bydd4-._.js:5300:50)
+    at Object.useEffect (file://C:/Users/tHi/Downloads/New Site/inci-site/.next/dev/static/chunks/1fhl_next_dist_compiled_react-dom_0bydd4-._.js:15568:13)
+    at <unknown> (file://C:/Users/tHi/Downloads/New Site/inci-site/.next/dev/static/chunks/1fhl_next_dist_compiled_0isrqw6._.js:1722:36)
+    at CTAButton (file://C:/Users/tHi/Downloads/New Site/inci-site/.next/dev/static/chunks/inci-site_src_0l55gxp._.js?id=%255Bproject%255D%252Finci-site%252Fsrc%252Fcomponents%252FCTAButton.tsx+%255Bapp-client%255D+%2528ecmascript%2529:26:196)
+    at Object.react_stack_bottom_frame (file://C:/Users/tHi/Downloads/New Site/inci-site/.next/dev/static/chunks/1fhl_next_dist_compiled_react-dom_0bydd4-._.js:15037:24)
+    at renderWithHooksAgain (file://C:/Users/tHi/Downloads/New Site/inci-site/.next/dev/static/chunks/1fhl_next_dist_compiled_react-dom_0bydd4-._.js:4675:24)
+    at renderWithHooks (file://C:/Users/tHi/Downloads/New Site/inci-site/.next/dev/static/chunks/1fhl_next_dist_compiled_react-dom_0bydd4-._.js:4626:28)
+    at updateFunctionComponent (file://C:/Users/tHi/Downloads/New Site/inci-site/.next/dev/static/chunks/1fhl_next_dist_compiled_react-dom_0bydd4-._.js:6081:21)
+    at beginWork (file://C:/Users/tHi/Downloads/New Site/inci-site/.next/dev/static/chunks/1fhl_next_dist_compiled_react-dom_0bydd4-._.js:6691:24)
+    at runWithFiberInDEV (file://C:/Users/tHi/Downloads/New Site/inci-site/.next/dev/static/chunks/1fhl_next_dist_compiled_react-dom_0bydd4-._.js:965:74)
+    at performUnitOfWork (file://C:/Users/tHi/Downloads/New Site/inci-site/.next/dev/static/chunks/1fhl_next_dist_compiled_react-dom_0bydd4-._.js:9555:97)
+    at workLoopSync (file://C:/Users/tHi/Downloads/New Site/inci-site/.next/dev/static/chunks/1fhl_next_dist_compiled_react-dom_0bydd4-._.js:9449:40)
+    at renderRootSync (file://C:/Users/tHi/Downloads/New Site/inci-site/.next/dev/static/chunks/1fhl_next_dist_compiled_react-dom_0bydd4-._.js:9433:13)
+    at performWorkOnRoot (file://C:/Users/tHi/Downloads/New Site/inci-site/.next/dev/static/chunks/1fhl_next_dist_compiled_react-dom_0bydd4-._.js:9061:186)
+    at performSyncWorkOnRoot (file://C:/Users/tHi/Downloads/New Site/inci-site/.next/dev/static/chunks/1fhl_next_dist_compiled_react-dom_0bydd4-._.js:10263:9)
+    at flushSyncWorkAcrossRoots_impl (file://C:/Users/tHi/Downloads/New Site/inci-site/.next/dev/static/chunks/1fhl_next_dist_compiled_react-dom_0bydd4-._.js:10179:316)
+    at flushSyncWork$1 (file://C:/Users/tHi/Downloads/New Site/inci-site/.next/dev/static/chunks/1fhl_next_dist_compiled_react-dom_0bydd4-._.js:9230:86)
+    at Object.scheduleRefresh (file://C:/Users/tHi/Downloads/New Site/inci-site/.next/dev/static/chunks/1fhl_next_dist_compiled_react-dom_0bydd4-._.js:299:13)
+    at <unknown> (file://C:/Users/tHi/Downloads/New Site/inci-site/.next/dev/static/chunks/1fhl_next_dist_compiled_0isrqw6._.js:391:33)
+    at Set.forEach (<anonymous>)
+    at Object.performReactRefresh (file://C:/Users/tHi/Downloads/New Site/inci-site/.next/dev/static/chunks/1fhl_next_dist_compiled_0isrqw6._.js:384:38)
+    at applyUpdate (file://C:/Users/tHi/Downloads/New Site/inci-site/.next/dev/static/chunks/1fhl_next_dist_compiled_0isrqw6._.js:878:31)
+    at <unknown> (file://C:/Users/tHi/Downloads/New Site/inci-site/.next/dev/static/chunks/1fhl_next_dist_compiled_0isrqw6._.js:886:13) (file://C:/Users/tHi/Downloads/New Site/inci-site/.next/dev/static/chunks/1fhl_next_dist_compiled_react-dom_0bydd4-._.js:4604:56)
+[browser] The final argument passed to useEffect changed size between renders. The order and size of this array must remain constant.
+
+Previous: []
+Incoming: [blue] 
+    at areHookInputsEqual (file://C:/Users/tHi/Downloads/New Site/inci-site/.next/dev/static/chunks/1fhl_next_dist_compiled_react-dom_0bydd4-._.js:4604:56)
+    at updateEffectImpl (file://C:/Users/tHi/Downloads/New Site/inci-site/.next/dev/static/chunks/1fhl_next_dist_compiled_react-dom_0bydd4-._.js:5300:50)
+    at Object.useEffect (file://C:/Users/tHi/Downloads/New Site/inci-site/.next/dev/static/chunks/1fhl_next_dist_compiled_react-dom_0bydd4-._.js:15568:13)
+    at <unknown> (file://C:/Users/tHi/Downloads/New Site/inci-site/.next/dev/static/chunks/1fhl_next_dist_compiled_0isrqw6._.js:1722:36)
+    at CTAButton (file://C:/Users/tHi/Downloads/New Site/inci-site/.next/dev/static/chunks/inci-site_src_0l55gxp._.js?id=%255Bproject%255D%252Finci-site%252Fsrc%252Fcomponents%252FCTAButton.tsx+%255Bapp-client%255D+%2528ecmascript%2529:26:196)
+    at Object.react_stack_bottom_frame (file://C:/Users/tHi/Downloads/New Site/inci-site/.next/dev/static/chunks/1fhl_next_dist_compiled_react-dom_0bydd4-._.js:15037:24)
+    at renderWithHooksAgain (file://C:/Users/tHi/Downloads/New Site/inci-site/.next/dev/static/chunks/1fhl_next_dist_compiled_react-dom_0bydd4-._.js:4675:24)
+    at renderWithHooks (file://C:/Users/tHi/Downloads/New Site/inci-site/.next/dev/static/chunks/1fhl_next_dist_compiled_react-dom_0bydd4-._.js:4626:28)
+    at updateFunctionComponent (file://C:/Users/tHi/Downloads/New Site/inci-site/.next/dev/static/chunks/1fhl_next_dist_compiled_react-dom_0bydd4-._.js:6081:21)
+    at beginWork (file://C:/Users/tHi/Downloads/New Site/inci-site/.next/dev/static/chunks/1fhl_next_dist_compiled_react-dom_0bydd4-._.js:6691:24)
+    at runWithFiberInDEV (file://C:/Users/tHi/Downloads/New Site/inci-site/.next/dev/static/chunks/1fhl_next_dist_compiled_react-dom_0bydd4-._.js:965:74)
+    at performUnitOfWork (file://C:/Users/tHi/Downloads/New Site/inci-site/.next/dev/static/chunks/1fhl_next_dist_compiled_react-dom_0bydd4-._.js:9555:97)
+    at workLoopSync (file://C:/Users/tHi/Downloads/New Site/inci-site/.next/dev/static/chunks/1fhl_next_dist_compiled_react-dom_0bydd4-._.js:9449:40)
+    at renderRootSync (file://C:/Users/tHi/Downloads/New Site/inci-site/.next/dev/static/chunks/1fhl_next_dist_compiled_react-dom_0bydd4-._.js:9433:13)
+    at performWorkOnRoot (file://C:/Users/tHi/Downloads/New Site/inci-site/.next/dev/static/chunks/1fhl_next_dist_compiled_react-dom_0bydd4-._.js:9061:186)
+    at performSyncWorkOnRoot (file://C:/Users/tHi/Downloads/New Site/inci-site/.next/dev/static/chunks/1fhl_next_dist_compiled_react-dom_0bydd4-._.js:10263:9)
+    at flushSyncWorkAcrossRoots_impl (file://C:/Users/tHi/Downloads/New Site/inci-site/.next/dev/static/chunks/1fhl_next_dist_compiled_react-dom_0bydd4-._.js:10179:316)
+    at flushSyncWork$1 (file://C:/Users/tHi/Downloads/New Site/inci-site/.next/dev/static/chunks/1fhl_next_dist_compiled_react-dom_0bydd4-._.js:9230:86)
+    at Object.scheduleRefresh (file://C:/Users/tHi/Downloads/New Site/inci-site/.next/dev/static/chunks/1fhl_next_dist_compiled_react-dom_0bydd4-._.js:299:13)
+    at <unknown> (file://C:/Users/tHi/Downloads/New Site/inci-site/.next/dev/static/chunks/1fhl_next_dist_compiled_0isrqw6._.js:391:33)
+    at Set.forEach (<anonymous>)
+    at Object.performReactRefresh (file://C:/Users/tHi/Downloads/New Site/inci-site/.next/dev/static/chunks/1fhl_next_dist_compiled_0isrqw6._.js:384:38)
+    at applyUpdate (file://C:/Users/tHi/Downloads/New Site/inci-site/.next/dev/static/chunks/1fhl_next_dist_compiled_0isrqw6._.js:878:31)
+    at <unknown> (file://C:/Users/tHi/Downloads/New Site/inci-site/.next/dev/static/chunks/1fhl_next_dist_compiled_0isrqw6._.js:886:13) (file://C:/Users/tHi/Downloads/New Site/inci-site/.next/dev/static/chunks/1fhl_next_dist_compiled_react-dom_0bydd4-._.js:4604:56)
+ GET / 200 in 487ms (next.js: 120ms, application-code: 367ms)
+ GET / 200 in 101ms (next.js: 21ms, application-code: 80ms)
+ GET / 200 in 270ms (next.js: 7ms, application-code: 264ms)
+✓ Compiled in 120ms
+[browser] The final argument passed to useEffect changed size between renders. The order and size of this array must remain constant.
+
+Previous: [blue]
+Incoming: [] 
+    at areHookInputsEqual (file://C:/Users/tHi/Downloads/New Site/inci-site/.next/dev/static/chunks/1fhl_next_dist_compiled_react-dom_0bydd4-._.js:4604:56)
+    at updateEffectImpl (file://C:/Users/tHi/Downloads/New Site/inci-site/.next/dev/static/chunks/1fhl_next_dist_compiled_react-dom_0bydd4-._.js:5300:50)
+    at Object.useEffect (file://C:/Users/tHi/Downloads/New Site/inci-site/.next/dev/static/chunks/1fhl_next_dist_compiled_react-dom_0bydd4-._.js:15568:13)
+    at <unknown> (file://C:/Users/tHi/Downloads/New Site/inci-site/.next/dev/static/chunks/1fhl_next_dist_compiled_0isrqw6._.js:1722:36)
+    at CTAButton (file://C:/Users/tHi/Downloads/New Site/inci-site/.next/dev/static/chunks/inci-site_src_0l55gxp._.js?id=%255Bproject%255D%252Finci-site%252Fsrc%252Fcomponents%252FCTAButton.tsx+%255Bapp-client%255D+%2528ecmascript%2529:26:196)
+    at Object.react_stack_bottom_frame (file://C:/Users/tHi/Downloads/New Site/inci-site/.next/dev/static/chunks/1fhl_next_dist_compiled_react-dom_0bydd4-._.js:15037:24)
+    at renderWithHooksAgain (file://C:/Users/tHi/Downloads/New Site/inci-site/.next/dev/static/chunks/1fhl_next_dist_compiled_react-dom_0bydd4-._.js:4675:24)
+    at renderWithHooks (file://C:/Users/tHi/Downloads/New Site/inci-site/.next/dev/static/chunks/1fhl_next_dist_compiled_react-dom_0bydd4-._.js:4626:28)
+    at updateFunctionComponent (file://C:/Users/tHi/Downloads/New Site/inci-site/.next/dev/static/chunks/1fhl_next_dist_compiled_react-dom_0bydd4-._.js:6081:21)
+    at beginWork (file://C:/Users/tHi/Downloads/New Site/inci-site/.next/dev/static/chunks/1fhl_next_dist_compiled_react-dom_0bydd4-._.js:6691:24)
+    at runWithFiberInDEV (file://C:/Users/tHi/Downloads/New Site/inci-site/.next/dev/static/chunks/1fhl_next_dist_compiled_react-dom_0bydd4-._.js:965:74)
+    at performUnitOfWork (file://C:/Users/tHi/Downloads/New Site/inci-site/.next/dev/static/chunks/1fhl_next_dist_compiled_react-dom_0bydd4-._.js:9555:97)
+    at workLoopSync (file://C:/Users/tHi/Downloads/New Site/inci-site/.next/dev/static/chunks/1fhl_next_dist_compiled_react-dom_0bydd4-._.js:9449:40)
+    at renderRootSync (file://C:/Users/tHi/Downloads/New Site/inci-site/.next/dev/static/chunks/1fhl_next_dist_compiled_react-dom_0bydd4-._.js:9433:13)
+    at performWorkOnRoot (file://C:/Users/tHi/Downloads/New Site/inci-site/.next/dev/static/chunks/1fhl_next_dist_compiled_react-dom_0bydd4-._.js:9061:186)
+    at performSyncWorkOnRoot (file://C:/Users/tHi/Downloads/New Site/inci-site/.next/dev/static/chunks/1fhl_next_dist_compiled_react-dom_0bydd4-._.js:10263:9)
+    at flushSyncWorkAcrossRoots_impl (file://C:/Users/tHi/Downloads/New Site/inci-site/.next/dev/static/chunks/1fhl_next_dist_compiled_react-dom_0bydd4-._.js:10179:316)
+    at flushSyncWork$1 (file://C:/Users/tHi/Downloads/New Site/inci-site/.next/dev/static/chunks/1fhl_next_dist_compiled_react-dom_0bydd4-._.js:9230:86)
+    at Object.scheduleRefresh (file://C:/Users/tHi/Downloads/New Site/inci-site/.next/dev/static/chunks/1fhl_next_dist_compiled_react-dom_0bydd4-._.js:299:13)
+    at <unknown> (file://C:/Users/tHi/Downloads/New Site/inci-site/.next/dev/static/chunks/1fhl_next_dist_compiled_0isrqw6._.js:391:33)
+    at Set.forEach (<anonymous>)
+    at Object.performReactRefresh (file://C:/Users/tHi/Downloads/New Site/inci-site/.next/dev/static/chunks/1fhl_next_dist_compiled_0isrqw6._.js:384:38)
+    at applyUpdate (file://C:/Users/tHi/Downloads/New Site/inci-site/.next/dev/static/chunks/1fhl_next_dist_compiled_0isrqw6._.js:878:31)
+    at <unknown> (file://C:/Users/tHi/Downloads/New Site/inci-site/.next/dev/static/chunks/1fhl_next_dist_compiled_0isrqw6._.js:886:13) (file://C:/Users/tHi/Downloads/New Site/inci-site/.next/dev/static/chunks/1fhl_next_dist_compiled_react-dom_0bydd4-._.js:4604:56)
+[browser] The final argument passed to useEffect changed size between renders. The order and size of this array must remain constant.
+
+Previous: [blue]
+Incoming: [] 
+    at areHookInputsEqual (file://C:/Users/tHi/Downloads/New Site/inci-site/.next/dev/static/chunks/1fhl_next_dist_compiled_react-dom_0bydd4-._.js:4604:56)
+    at updateEffectImpl (file://C:/Users/tHi/Downloads/New Site/inci-site/.next/dev/static/chunks/1fhl_next_dist_compiled_react-dom_0bydd4-._.js:5300:50)
+    at Object.useEffect (file://C:/Users/tHi/Downloads/New Site/inci-site/.next/dev/static/chunks/1fhl_next_dist_compiled_react-dom_0bydd4-._.js:15568:13)
+    at <unknown> (file://C:/Users/tHi/Downloads/New Site/inci-site/.next/dev/static/chunks/1fhl_next_dist_compiled_0isrqw6._.js:1722:36)
+    at CTAButton (file://C:/Users/tHi/Downloads/New Site/inci-site/.next/dev/static/chunks/inci-site_src_0l55gxp._.js?id=%255Bproject%255D%252Finci-site%252Fsrc%252Fcomponents%252FCTAButton.tsx+%255Bapp-client%255D+%2528ecmascript%2529:26:196)
+    at Object.react_stack_bottom_frame (file://C:/Users/tHi/Downloads/New Site/inci-site/.next/dev/static/chunks/1fhl_next_dist_compiled_react-dom_0bydd4-._.js:15037:24)
+    at renderWithHooksAgain (file://C:/Users/tHi/Downloads/New Site/inci-site/.next/dev/static/chunks/1fhl_next_dist_compiled_react-dom_0bydd4-._.js:4675:24)
+    at renderWithHooks (file://C:/Users/tHi/Downloads/New Site/inci-site/.next/dev/static/chunks/1fhl_next_dist_compiled_react-dom_0bydd4-._.js:4626:28)
+    at updateFunctionComponent (file://C:/Users/tHi/Downloads/New Site/inci-site/.next/dev/static/chunks/1fhl_next_dist_compiled_react-dom_0bydd4-._.js:6081:21)
+    at beginWork (file://C:/Users/tHi/Downloads/New Site/inci-site/.next/dev/static/chunks/1fhl_next_dist_compiled_react-dom_0bydd4-._.js:6691:24)
+    at runWithFiberInDEV (file://C:/Users/tHi/Downloads/New Site/inci-site/.next/dev/static/chunks/1fhl_next_dist_compiled_react-dom_0bydd4-._.js:965:74)
+    at performUnitOfWork (file://C:/Users/tHi/Downloads/New Site/inci-site/.next/dev/static/chunks/1fhl_next_dist_compiled_react-dom_0bydd4-._.js:9555:97)
+    at workLoopSync (file://C:/Users/tHi/Downloads/New Site/inci-site/.next/dev/static/chunks/1fhl_next_dist_compiled_react-dom_0bydd4-._.js:9449:40)
+    at renderRootSync (file://C:/Users/tHi/Downloads/New Site/inci-site/.next/dev/static/chunks/1fhl_next_dist_compiled_react-dom_0bydd4-._.js:9433:13)
+    at performWorkOnRoot (file://C:/Users/tHi/Downloads/New Site/inci-site/.next/dev/static/chunks/1fhl_next_dist_compiled_react-dom_0bydd4-._.js:9061:186)
+    at performSyncWorkOnRoot (file://C:/Users/tHi/Downloads/New Site/inci-site/.next/dev/static/chunks/1fhl_next_dist_compiled_react-dom_0bydd4-._.js:10263:9)
+    at flushSyncWorkAcrossRoots_impl (file://C:/Users/tHi/Downloads/New Site/inci-site/.next/dev/static/chunks/1fhl_next_dist_compiled_react-dom_0bydd4-._.js:10179:316)
+    at flushSyncWork$1 (file://C:/Users/tHi/Downloads/New Site/inci-site/.next/dev/static/chunks/1fhl_next_dist_compiled_react-dom_0bydd4-._.js:9230:86)
+    at Object.scheduleRefresh (file://C:/Users/tHi/Downloads/New Site/inci-site/.next/dev/static/chunks/1fhl_next_dist_compiled_react-dom_0bydd4-._.js:299:13)
+    at <unknown> (file://C:/Users/tHi/Downloads/New Site/inci-site/.next/dev/static/chunks/1fhl_next_dist_compiled_0isrqw6._.js:391:33)
+    at Set.forEach (<anonymous>)
+    at Object.performReactRefresh (file://C:/Users/tHi/Downloads/New Site/inci-site/.next/dev/static/chunks/1fhl_next_dist_compiled_0isrqw6._.js:384:38)
+    at applyUpdate (file://C:/Users/tHi/Downloads/New Site/inci-site/.next/dev/static/chunks/1fhl_next_dist_compiled_0isrqw6._.js:878:31)
+    at <unknown> (file://C:/Users/tHi/Downloads/New Site/inci-site/.next/dev/static/chunks/1fhl_next_dist_compiled_0isrqw6._.js:886:13) (file://C:/Users/tHi/Downloads/New Site/inci-site/.next/dev/static/chunks/1fhl_next_dist_compiled_react-dom_0bydd4-._.js:4604:56)
+[browser] The final argument passed to useEffect changed size between renders. The order and size of this array must remain constant.
+
+Previous: [gray]
+Incoming: [] 
+    at areHookInputsEqual (file://C:/Users/tHi/Downloads/New Site/inci-site/.next/dev/static/chunks/1fhl_next_dist_compiled_react-dom_0bydd4-._.js:4604:56)
+    at updateEffectImpl (file://C:/Users/tHi/Downloads/New Site/inci-site/.next/dev/static/chunks/1fhl_next_dist_compiled_react-dom_0bydd4-._.js:5300:50)
+    at Object.useEffect (file://C:/Users/tHi/Downloads/New Site/inci-site/.next/dev/static/chunks/1fhl_next_dist_compiled_react-dom_0bydd4-._.js:15568:13)
+    at <unknown> (file://C:/Users/tHi/Downloads/New Site/inci-site/.next/dev/static/chunks/1fhl_next_dist_compiled_0isrqw6._.js:1722:36)
+    at CTAButton (file://C:/Users/tHi/Downloads/New Site/inci-site/.next/dev/static/chunks/inci-site_src_0l55gxp._.js?id=%255Bproject%255D%252Finci-site%252Fsrc%252Fcomponents%252FCTAButton.tsx+%255Bapp-client%255D+%2528ecmascript%2529:26:196)
+    at Object.react_stack_bottom_frame (file://C:/Users/tHi/Downloads/New Site/inci-site/.next/dev/static/chunks/1fhl_next_dist_compiled_react-dom_0bydd4-._.js:15037:24)
+    at renderWithHooksAgain (file://C:/Users/tHi/Downloads/New Site/inci-site/.next/dev/static/chunks/1fhl_next_dist_compiled_react-dom_0bydd4-._.js:4675:24)
+    at renderWithHooks (file://C:/Users/tHi/Downloads/New Site/inci-site/.next/dev/static/chunks/1fhl_next_dist_compiled_react-dom_0bydd4-._.js:4626:28)
+    at updateFunctionComponent (file://C:/Users/tHi/Downloads/New Site/inci-site/.next/dev/static/chunks/1fhl_next_dist_compiled_react-dom_0bydd4-._.js:6081:21)
+    at beginWork (file://C:/Users/tHi/Downloads/New Site/inci-site/.next/dev/static/chunks/1fhl_next_dist_compiled_react-dom_0bydd4-._.js:6691:24)
+    at runWithFiberInDEV (file://C:/Users/tHi/Downloads/New Site/inci-site/.next/dev/static/chunks/1fhl_next_dist_compiled_react-dom_0bydd4-._.js:965:74)
+    at performUnitOfWork (file://C:/Users/tHi/Downloads/New Site/inci-site/.next/dev/static/chunks/1fhl_next_dist_compiled_react-dom_0bydd4-._.js:9555:97)
+    at workLoopSync (file://C:/Users/tHi/Downloads/New Site/inci-site/.next/dev/static/chunks/1fhl_next_dist_compiled_react-dom_0bydd4-._.js:9449:40)
+    at renderRootSync (file://C:/Users/tHi/Downloads/New Site/inci-site/.next/dev/static/chunks/1fhl_next_dist_compiled_react-dom_0bydd4-._.js:9433:13)
+    at performWorkOnRoot (file://C:/Users/tHi/Downloads/New Site/inci-site/.next/dev/static/chunks/1fhl_next_dist_compiled_react-dom_0bydd4-._.js:9061:186)
+    at performSyncWorkOnRoot (file://C:/Users/tHi/Downloads/New Site/inci-site/.next/dev/static/chunks/1fhl_next_dist_compiled_react-dom_0bydd4-._.js:10263:9)
+    at flushSyncWorkAcrossRoots_impl (file://C:/Users/tHi/Downloads/New Site/inci-site/.next/dev/static/chunks/1fhl_next_dist_compiled_react-dom_0bydd4-._.js:10179:316)
+    at flushSyncWork$1 (file://C:/Users/tHi/Downloads/New Site/inci-site/.next/dev/static/chunks/1fhl_next_dist_compiled_react-dom_0bydd4-._.js:9230:86)
+    at Object.scheduleRefresh (file://C:/Users/tHi/Downloads/New Site/inci-site/.next/dev/static/chunks/1fhl_next_dist_compiled_react-dom_0bydd4-._.js:299:13)
+    at <unknown> (file://C:/Users/tHi/Downloads/New Site/inci-site/.next/dev/static/chunks/1fhl_next_dist_compiled_0isrqw6._.js:391:33)
+    at Set.forEach (<anonymous>)
+    at Object.performReactRefresh (file://C:/Users/tHi/Downloads/New Site/inci-site/.next/dev/static/chunks/1fhl_next_dist_compiled_0isrqw6._.js:384:38)
+    at applyUpdate (file://C:/Users/tHi/Downloads/New Site/inci-site/.next/dev/static/chunks/1fhl_next_dist_compiled_0isrqw6._.js:878:31)
+    at <unknown> (file://C:/Users/tHi/Downloads/New Site/inci-site/.next/dev/static/chunks/1fhl_next_dist_compiled_0isrqw6._.js:886:13) (file://C:/Users/tHi/Downloads/New Site/inci-site/.next/dev/static/chunks/1fhl_next_dist_compiled_react-dom_0bydd4-._.js:4604:56)
+[browser] The final argument passed to useEffect changed size between renders. The order and size of this array must remain constant.
+
+Previous: [blue]
+Incoming: [] 
+    at areHookInputsEqual (file://C:/Users/tHi/Downloads/New Site/inci-site/.next/dev/static/chunks/1fhl_next_dist_compiled_react-dom_0bydd4-._.js:4604:56)
+    at updateEffectImpl (file://C:/Users/tHi/Downloads/New Site/inci-site/.next/dev/static/chunks/1fhl_next_dist_compiled_react-dom_0bydd4-._.js:5300:50)
+    at Object.useEffect (file://C:/Users/tHi/Downloads/New Site/inci-site/.next/dev/static/chunks/1fhl_next_dist_compiled_react-dom_0bydd4-._.js:15568:13)
+    at <unknown> (file://C:/Users/tHi/Downloads/New Site/inci-site/.next/dev/static/chunks/1fhl_next_dist_compiled_0isrqw6._.js:1722:36)
+    at CTAButton (file://C:/Users/tHi/Downloads/New Site/inci-site/.next/dev/static/chunks/inci-site_src_0l55gxp._.js?id=%255Bproject%255D%252Finci-site%252Fsrc%252Fcomponents%252FCTAButton.tsx+%255Bapp-client%255D+%2528ecmascript%2529:26:196)
+    at Object.react_stack_bottom_frame (file://C:/Users/tHi/Downloads/New Site/inci-site/.next/dev/static/chunks/1fhl_next_dist_compiled_react-dom_0bydd4-._.js:15037:24)
+    at renderWithHooksAgain (file://C:/Users/tHi/Downloads/New Site/inci-site/.next/dev/static/chunks/1fhl_next_dist_compiled_react-dom_0bydd4-._.js:4675:24)
+    at renderWithHooks (file://C:/Users/tHi/Downloads/New Site/inci-site/.next/dev/static/chunks/1fhl_next_dist_compiled_react-dom_0bydd4-._.js:4626:28)
+    at updateFunctionComponent (file://C:/Users/tHi/Downloads/New Site/inci-site/.next/dev/static/chunks/1fhl_next_dist_compiled_react-dom_0bydd4-._.js:6081:21)
+    at beginWork (file://C:/Users/tHi/Downloads/New Site/inci-site/.next/dev/static/chunks/1fhl_next_dist_compiled_react-dom_0bydd4-._.js:6691:24)
+    at runWithFiberInDEV (file://C:/Users/tHi/Downloads/New Site/inci-site/.next/dev/static/chunks/1fhl_next_dist_compiled_react-dom_0bydd4-._.js:965:74)
+    at performUnitOfWork (file://C:/Users/tHi/Downloads/New Site/inci-site/.next/dev/static/chunks/1fhl_next_dist_compiled_react-dom_0bydd4-._.js:9555:97)
+    at workLoopSync (file://C:/Users/tHi/Downloads/New Site/inci-site/.next/dev/static/chunks/1fhl_next_dist_compiled_react-dom_0bydd4-._.js:9449:40)
+    at renderRootSync (file://C:/Users/tHi/Downloads/New Site/inci-site/.next/dev/static/chunks/1fhl_next_dist_compiled_react-dom_0bydd4-._.js:9433:13)
+    at performWorkOnRoot (file://C:/Users/tHi/Downloads/New Site/inci-site/.next/dev/static/chunks/1fhl_next_dist_compiled_react-dom_0bydd4-._.js:9061:186)
+    at performSyncWorkOnRoot (file://C:/Users/tHi/Downloads/New Site/inci-site/.next/dev/static/chunks/1fhl_next_dist_compiled_react-dom_0bydd4-._.js:10263:9)
+    at flushSyncWorkAcrossRoots_impl (file://C:/Users/tHi/Downloads/New Site/inci-site/.next/dev/static/chunks/1fhl_next_dist_compiled_react-dom_0bydd4-._.js:10179:316)
+    at flushSyncWork$1 (file://C:/Users/tHi/Downloads/New Site/inci-site/.next/dev/static/chunks/1fhl_next_dist_compiled_react-dom_0bydd4-._.js:9230:86)
+    at Object.scheduleRefresh (file://C:/Users/tHi/Downloads/New Site/inci-site/.next/dev/static/chunks/1fhl_next_dist_compiled_react-dom_0bydd4-._.js:299:13)
+    at <unknown> (file://C:/Users/tHi/Downloads/New Site/inci-site/.next/dev/static/chunks/1fhl_next_dist_compiled_0isrqw6._.js:391:33)
+    at Set.forEach (<anonymous>)
+    at Object.performReactRefresh (file://C:/Users/tHi/Downloads/New Site/inci-site/.next/dev/static/chunks/1fhl_next_dist_compiled_0isrqw6._.js:384:38)
+    at applyUpdate (file://C:/Users/tHi/Downloads/New Site/inci-site/.next/dev/static/chunks/1fhl_next_dist_compiled_0isrqw6._.js:878:31)
+    at <unknown> (file://C:/Users/tHi/Downloads/New Site/inci-site/.next/dev/static/chunks/1fhl_next_dist_compiled_0isrqw6._.js:886:13) (file://C:/Users/tHi/Downloads/New Site/inci-site/.next/dev/static/chunks/1fhl_next_dist_compiled_react-dom_0bydd4-._.js:4604:56)
+ GET / 200 in 352ms (next.js: 101ms, application-code: 251ms)
+ GET / 200 in 69ms (next.js: 7ms, application-code: 62ms)
