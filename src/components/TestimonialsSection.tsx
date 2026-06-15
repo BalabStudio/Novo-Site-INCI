@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useRef, useEffect, useLayoutEffect } from "react";
+import { useState, useRef, useEffect } from "react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 
@@ -76,7 +76,7 @@ export default function TestimonialsSection() {
     return () => { tl.kill(); };
   }, [current]);
 
-  useLayoutEffect(() => {
+  useEffect(() => {
     const ctx = gsap.context(() => {
       const els = gsap.utils.toArray<HTMLElement>("[data-reveal]");
       gsap.set(els, { opacity: 0, y: 24 });
@@ -86,7 +86,15 @@ export default function TestimonialsSection() {
         scrollTrigger: { trigger: sectionRef.current, start: "top bottom", once: true },
       });
     }, sectionRef);
-    return () => { ctx.revert(); ScrollTrigger.getAll().forEach((st) => st.kill()); };
+    return () => { ScrollTrigger.getAll().forEach((st) => st.kill()); ctx.revert(); };
+  }, []);
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      dirRef.current = 1;
+      setCurrent((c) => (c === testimonials.length - 1 ? 0 : c + 1));
+    }, 5000);
+    return () => clearInterval(interval);
   }, []);
 
   const prev = () => {
@@ -146,7 +154,7 @@ export default function TestimonialsSection() {
                     </div>
                   </div>
                   <div ref={imageRef} className="w-full md:w-[240px] self-stretch relative rounded-xl overflow-hidden">
-                    <img className="w-full h-full object-cover" src={`https://placehold.co/608x486?text=${encodeURIComponent(t.name)}`} alt={t.name} />
+                    <img className="w-full h-full object-cover" src={`/images/cards/depoimentos_${t.name.toLowerCase()}.webp`} alt={t.name} />
                   </div>
                 </div>
               </div>

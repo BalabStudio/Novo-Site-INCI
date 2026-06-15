@@ -22,7 +22,7 @@ export default function AboutMissionSection() {
       tl.to("[data-line]", { scaleX: 1, duration: 0.6, ease: "expo.out" }, "-=0.35");
       tl.to("[data-item]", { opacity: 1, y: 0, duration: 0.5, stagger: 0.12, ease: "power3.out" }, "-=0.3");
     }, sectionRef);
-    return () => { ctx.revert(); ScrollTrigger.getAll().forEach((st) => st.kill()); };
+    return () => { ScrollTrigger.getAll().forEach((st) => st.kill()); ctx.revert(); };
   }, []);
 
   return (

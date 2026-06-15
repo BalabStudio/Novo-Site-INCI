@@ -35,7 +35,7 @@ export default function ImageCarousel() {
     <div className="relative overflow-hidden -mx-14">
       <div ref={trackRef} className="inline-flex justify-start items-start gap-5">
         {[...images, ...images].map((img, i) => (
-          <img key={i} src={img} alt="" className="rounded-3xl" />
+          <img key={i < images.length ? `a-${i}` : `b-${i - images.length}`} src={img} alt={`Galeria ${(i % images.length) + 1}`} className="rounded-3xl" />
         ))}
       </div>
     </div>

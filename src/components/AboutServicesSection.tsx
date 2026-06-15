@@ -68,7 +68,7 @@ export default function AboutServicesSection() {
         scrollTrigger: { trigger: sectionRef.current, start: "top bottom", once: true },
       });
     }, sectionRef);
-    return () => { ctx.revert(); ScrollTrigger.getAll().forEach((st) => st.kill()); };
+    return () => { ScrollTrigger.getAll().forEach((st) => st.kill()); ctx.revert(); };
   }, []);
 
   const ServiceCard = ({ s, i }: { s: typeof services[0]; i: number }) => (

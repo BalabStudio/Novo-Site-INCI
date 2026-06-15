@@ -40,7 +40,7 @@ export default function AboutPurposeSection() {
       tl.to("[data-card]", { opacity: 1, y: 0, scale: 1, duration: 0.6, stagger: { amount: 0.3 }, ease: "power3.out" }, "-=0.15");
       tl.to("[data-card] [data-icon]", { opacity: 1, scale: 1, duration: 0.4, stagger: { amount: 0.2, from: "start" }, ease: "back.out(1.7)" }, "-=0.2");
     }, sectionRef);
-    return () => { ctx.revert(); ScrollTrigger.getAll().forEach((st) => st.kill()); };
+    return () => { ScrollTrigger.getAll().forEach((st) => st.kill()); ctx.revert(); };
   }, []);
 
   return (

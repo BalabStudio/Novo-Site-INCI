@@ -32,6 +32,7 @@ const benefits = [
 export default function CoworkingBenefits() {
   const sectionRef = useRef<HTMLDivElement>(null);
   const cardsRef = useRef<HTMLDivElement>(null);
+  const acRef = useRef<AbortController | null>(null);
 
   useLayoutEffect(() => {
     const ctx = gsap.context(() => {
@@ -43,24 +44,28 @@ export default function CoworkingBenefits() {
           stagger: { amount: 0.4, from: "start" },
           scrollTrigger: { trigger: sectionRef.current, start: "top 80%", once: true },
           onComplete: () => {
+            acRef.current?.abort();
+            const ac = new AbortController();
+            acRef.current = ac;
+            const { signal } = ac;
+
             Array.from(cards).forEach((card) => {
               const iconWrap = card.querySelector(".benefit-icon");
               const title = card.querySelector(".benefit-title");
-              const desc = card.querySelector(".benefit-desc");
 
               const tl = gsap.timeline({ paused: true, defaults: { ease: "power3.out" } });
               tl.to(card, { scale: 1.02, duration: 0.3 }, 0)
                 .to(iconWrap, { scale: 1.1, duration: 0.3 }, 0)
                 .to(title, { x: 4, duration: 0.25 }, 0);
 
-              card.addEventListener("mouseenter", () => tl.play());
-              card.addEventListener("mouseleave", () => tl.reverse());
+              card.addEventListener("mouseenter", () => tl.play(), { signal });
+              card.addEventListener("mouseleave", () => tl.reverse(), { signal });
             });
           },
         });
       }
     }, sectionRef);
-    return () => { ctx.revert(); ScrollTrigger.getAll().forEach((st) => st.kill()); };
+    return () => { acRef.current?.abort(); ScrollTrigger.getAll().forEach((st) => st.kill()); ctx.revert(); };
   }, []);
 
   return (

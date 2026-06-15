@@ -1,10 +1,12 @@
 "use client";
 
-import { useLayoutEffect, useRef } from "react";
+import { useEffect, useRef } from "react";
 import gsap from "gsap";
 import Header from "./Header";
 
 function splitSpans(parent: HTMLElement) {
+  if (parent.dataset.gsapOriginal) return [];
+  parent.dataset.gsapOriginal = parent.innerHTML;
   const children = Array.from(parent.children) as HTMLSpanElement[];
   const all: HTMLSpanElement[] = [];
   children.forEach((child) => {
@@ -34,7 +36,15 @@ export default function CoworkingHero() {
   const eyebrowRef = useRef<HTMLDivElement>(null);
   const videoRef = useRef<HTMLVideoElement>(null);
 
-  useLayoutEffect(() => {
+  useEffect(() => {
+    const vid = videoRef.current;
+    if (!vid) return;
+    const onPause = () => { if (!vid.ended) vid.play(); };
+    vid.addEventListener("pause", onPause);
+    return () => vid.removeEventListener("pause", onPause);
+  }, []);
+
+  useEffect(() => {
     const ctx = gsap.context(() => {
       const chars = titleRef.current ? splitSpans(titleRef.current) : [];
 
@@ -79,7 +89,13 @@ export default function CoworkingHero() {
         );
     }, rootRef);
 
-    return () => ctx.revert();
+    return () => {
+      if (titleRef.current && titleRef.current.dataset.gsapOriginal) {
+        titleRef.current.innerHTML = titleRef.current.dataset.gsapOriginal;
+        delete titleRef.current.dataset.gsapOriginal;
+      }
+      ctx.revert();
+    };
   }, []);
 
   return (
@@ -87,6 +103,7 @@ export default function CoworkingHero() {
       <div className="absolute inset-0 bg-neutral-900 rounded-3xl overflow-hidden">
         <video ref={videoRef} autoPlay muted loop playsInline preload="auto" className="absolute inset-0 w-full h-full object-cover">
           <source src="https://www.dropbox.com/scl/fi/g0j7lhe766wd9j22ue6o8/INAUGURADA-A-Inci-Brasil-agora-tem-uma-nova-sede-Esse-pr-dio-muito-mais-do-que-apenas-um.mp4?rlkey=vpop6cikxuax36nd54s3an2pd&st=q91jhycw&dl=1" type="video/mp4" />
+          Seu navegador não suporta vídeo.
         </video>
         <div className="absolute inset-0 bg-black/60 z-[1]" />
       </div>

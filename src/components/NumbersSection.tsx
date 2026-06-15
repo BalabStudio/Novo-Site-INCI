@@ -171,7 +171,7 @@ export default function NumbersSection() {
           </div>
         </div>
         <div className="lg:flex-1 self-stretch min-h-[200px] lg:h-72 p-5 relative rounded-3xl inline-flex flex-col justify-start items-start overflow-hidden bg-neutral-900">
-          <img ref={imgRef} className="w-full h-full left-0 top-0 absolute object-cover" src="/images/cards/card_projetos.webp" alt="" />
+          <img ref={imgRef} className="w-full h-full left-0 top-0 absolute object-cover" src="/images/cards/card_projetos.webp" alt="Projetos em educação e tecnologia" />
           <div className="self-stretch flex flex-col justify-start items-start">
             <div className="self-stretch inline-flex justify-start items-center gap-1">
               <div className="flex-1 inline-flex flex-col justify-start items-start">

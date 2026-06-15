@@ -32,13 +32,13 @@ export default function CoworkingHighlight() {
           "-=0.5"
         );
     }, sectionRef);
-    return () => { ctx.revert(); ScrollTrigger.getAll().forEach((st) => st.kill()); };
+    return () => { ScrollTrigger.getAll().forEach((st) => st.kill()); ctx.revert(); };
   }, []);
 
   return (
     <div ref={sectionRef} className="self-stretch mx-2 md:mx-0">
       <div className="self-stretch relative h-[420px] md:h-[560px] rounded-3xl overflow-hidden">
-          <img ref={imgRef} className="absolute inset-0 w-full h-full object-cover" src="/images/cards/ambiente_premium.webp" alt="" />
+          <img ref={imgRef} className="absolute inset-0 w-full h-full object-cover" src="/images/cards/ambiente_premium.webp" alt="Ambiente premium coworking" />
         <div className="absolute inset-0 bg-black/50 z-10" />
         <div ref={textRef} className="absolute inset-0 z-20 flex flex-col justify-center items-center p-6 md:p-14">
           <div className="max-w-2xl text-center">

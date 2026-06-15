@@ -47,9 +47,9 @@ export default function Header() {
           {solucoesOpen && (
             <div className="absolute top-full left-1/2 -translate-x-1/2 bg-neutral-800 rounded-2xl px-4 py-4 grid grid-cols-2 gap-3 z-[9999] border border-white/15 shadow-lg"
               onMouseLeave={() => setSolucoesOpen(false)}>
-              <a href="#" className="text-white text-base font-normal font-rethink uppercase leading-6 tracking-widest px-3 py-2 hover:bg-white/10 rounded-lg">Educação</a>
-              <a href="#" className="text-white text-base font-normal font-rethink uppercase leading-6 tracking-widest px-3 py-2 hover:bg-white/10 rounded-lg">Tecnologia</a>
-              <a href="#" className="text-white text-base font-normal font-rethink uppercase leading-6 tracking-widest px-3 py-2 hover:bg-white/10 rounded-lg">Eventos</a>
+              <a href="#cursos-online" className="text-white text-base font-normal font-rethink uppercase leading-6 tracking-widest px-3 py-2 hover:bg-white/10 rounded-lg">Educação</a>
+              <a href="#tecnologia" className="text-white text-base font-normal font-rethink uppercase leading-6 tracking-widest px-3 py-2 hover:bg-white/10 rounded-lg">Tecnologia</a>
+              <a href="#eventos" className="text-white text-base font-normal font-rethink uppercase leading-6 tracking-widest px-3 py-2 hover:bg-white/10 rounded-lg">Eventos</a>
             </div>
           )}
         </div>
@@ -88,9 +88,9 @@ export default function Header() {
               </button>
               {solucoesOpen && (
                 <div className="mt-3 pl-4 flex flex-col gap-3 border-l border-white/20 bg-neutral-900">
-                  <a href="#" className="text-white/80 text-base font-normal font-rethink uppercase tracking-widest hover:text-white">Educação</a>
-                  <a href="#" className="text-white/80 text-base font-normal font-rethink uppercase tracking-widest hover:text-white">Tecnologia</a>
-                  <a href="#" className="text-white/80 text-base font-normal font-rethink uppercase tracking-widest hover:text-white">Eventos</a>
+                  <a href="#cursos-online" className="text-white/80 text-base font-normal font-rethink uppercase tracking-widest hover:text-white">Educação</a>
+                  <a href="#tecnologia" className="text-white/80 text-base font-normal font-rethink uppercase tracking-widest hover:text-white">Tecnologia</a>
+                  <a href="#eventos" className="text-white/80 text-base font-normal font-rethink uppercase tracking-widest hover:text-white">Eventos</a>
                 </div>
               )}
             </div>

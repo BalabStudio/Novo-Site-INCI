@@ -31,7 +31,7 @@ export default function Footer() {
         });
       }
     }, sectionRef);
-    return () => { ctx.revert(); ScrollTrigger.getAll().forEach((st) => st.kill()); };
+    return () => { ScrollTrigger.getAll().forEach((st) => st.kill()); ctx.revert(); };
   }, []);
 
   return (
@@ -73,18 +73,13 @@ export default function Footer() {
             </div>
             <div data-reveal className="inline-flex flex-col justify-start items-start gap-3">
               <div ref={iconsRef} className="h-6 inline-flex justify-start items-start gap-4">
-                <svg className="size-5 md:size-6 text-orange-400" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-                  <rect x="2" y="2" width="20" height="20" rx="5" ry="5" />
-                  <circle cx="12" cy="12" r="5" />
-                  <circle cx="17.5" cy="6.5" r="1.5" />
-                </svg>
-                <svg className="size-5 md:size-6 text-orange-400" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5">
-                  <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z" />
-                </svg>
-                <svg className="size-5 md:size-6 text-orange-400" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-                  <rect x="2" y="4" width="20" height="16" rx="3" />
-                  <polygon points="10,8 16,12 10,16" fill="currentColor" stroke="none" />
-                </svg>
+                <a href="https://www.instagram.com/inci.brasil/" target="_blank" rel="noopener noreferrer">
+                  <svg className="size-5 md:size-6 text-orange-400 hover:text-orange-300 transition-colors" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                    <rect x="2" y="2" width="20" height="20" rx="5" ry="5" />
+                    <circle cx="12" cy="12" r="5" />
+                    <circle cx="17.5" cy="6.5" r="1.5" />
+                  </svg>
+                </a>
               </div>
             </div>
           </div>

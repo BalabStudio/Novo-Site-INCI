@@ -68,12 +68,12 @@ export default function AboutValuesSection() {
         <div className="flex flex-col gap-3">
           <div ref={(el) => { trackRefs.current[0] = el; }} className="inline-flex gap-3" style={{ willChange: "transform" }}>
             {[...row1, ...row1, ...row1, ...row1].map((v, i) => (
-              <Pill key={i} v={v} i={i % row1.length} offset={1} />
+              <Pill key={`r1-${i}`} v={v} i={i % row1.length} offset={1} />
             ))}
           </div>
           <div ref={(el) => { trackRefs.current[1] = el; }} className="inline-flex gap-3" style={{ willChange: "transform" }}>
             {[...row2, ...row2, ...row2, ...row2].map((v, i) => (
-              <Pill key={i} v={v} i={i % row2.length} offset={7} />
+              <Pill key={`r2-${i}`} v={v} i={i % row2.length} offset={7} />
             ))}
           </div>
         </div>

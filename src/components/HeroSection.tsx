@@ -1,6 +1,6 @@
 "use client";
 
-import { useLayoutEffect, useRef } from "react";
+import { useEffect, useLayoutEffect, useRef } from "react";
 import gsap from "gsap";
 import Header from "./Header";
 
@@ -12,6 +12,15 @@ export default function HeroSection() {
   const subRef = useRef<HTMLDivElement>(null);
   const badgeRef = useRef<HTMLDivElement>(null);
   const carouselRef = useRef<HTMLDivElement>(null);
+  const videoRef = useRef<HTMLVideoElement>(null);
+
+  useEffect(() => {
+    const vid = videoRef.current;
+    if (!vid) return;
+    const onPause = () => { if (!vid.ended) vid.play(); };
+    vid.addEventListener("pause", onPause);
+    return () => vid.removeEventListener("pause", onPause);
+  }, []);
 
   useLayoutEffect(() => {
     const ctx = gsap.context(() => {
@@ -49,6 +58,7 @@ export default function HeroSection() {
     <div ref={rootRef} className="self-stretch py-8 md:py-10 mx-2 md:mx-0 px-4 md:px-14 rounded-3xl inline-flex flex-col justify-start items-start gap-8 md:gap-12 relative overflow-hidden">
       <div className="absolute inset-0 bg-neutral-900">
         <video
+          ref={videoRef}
           autoPlay
           muted
           loop
@@ -59,6 +69,7 @@ export default function HeroSection() {
           onLoadedMetadata={(e) => { e.currentTarget.currentTime = 20; }}
         >
           <source src="https://www.dropbox.com/scl/fi/g0j7lhe766wd9j22ue6o8/INAUGURADA-A-Inci-Brasil-agora-tem-uma-nova-sede-Esse-pr-dio-muito-mais-do-que-apenas-um.mp4?rlkey=vpop6cikxuax36nd54s3an2pd&st=q91jhycw&dl=1" type="video/mp4" />
+          Seu navegador não suporta vídeo.
         </video>
         <div className="absolute inset-0 bg-black/60 z-[1]" />
       </div>

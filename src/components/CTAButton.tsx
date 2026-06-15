@@ -34,6 +34,9 @@ export default function CTAButton({
     const arrow = btn.querySelector<HTMLElement>("[data-cta-arrow]");
     if (!overlay) return;
 
+    const ac = new AbortController();
+    const { signal } = ac;
+
     const ctx = gsap.context(() => {
       const tl = gsap.timeline({ paused: true });
 
@@ -47,11 +50,11 @@ export default function CTAButton({
         tl.to(arrow, { rotation: 45, duration: 0.6, ease: "power2.out" }, 0);
       }
 
-      btn.addEventListener("mouseenter", () => tl.play());
-      btn.addEventListener("mouseleave", () => tl.reverse());
+      btn.addEventListener("mouseenter", () => tl.play(), { signal });
+      btn.addEventListener("mouseleave", () => tl.reverse(), { signal });
     }, btn);
 
-    return () => ctx.revert();
+    return () => { ac.abort(); ctx.revert(); };
   }, []);
 
   const outerBg = variant === "gray" ? "bg-gray-200" : "bg-blue-500";

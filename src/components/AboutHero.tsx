@@ -1,10 +1,12 @@
 "use client";
 
-import { useRef, useLayoutEffect } from "react";
+import { useRef, useEffect } from "react";
 import gsap from "gsap";
 import Header from "./Header";
 
 function splitText(el: HTMLElement) {
+  if (el.dataset.gsapOriginal) return [];
+  el.dataset.gsapOriginal = el.innerHTML;
   const text = el.textContent!.trim();
   el.textContent = "";
   el.style.overflow = "hidden";
@@ -25,7 +27,7 @@ export default function AboutHero() {
   const p1Ref = useRef<HTMLDivElement>(null);
   const p2Ref = useRef<HTMLDivElement>(null);
   const p3Ref = useRef<HTMLDivElement>(null);
-  useLayoutEffect(() => {
+  useEffect(() => {
     const ctx = gsap.context(() => {
       const chars = titleRef.current ? splitText(titleRef.current) : [];
 
@@ -42,14 +44,20 @@ export default function AboutHero() {
         .fromTo(p2Ref.current, { opacity: 0, y: 20 }, { opacity: 1, y: 0, duration: 0.55 }, "-=0.25")
         .fromTo(p3Ref.current, { opacity: 0, y: 20 }, { opacity: 1, y: 0, duration: 0.55 }, "-=0.25");
     }, sectionRef);
-    return () => ctx.revert();
+    return () => {
+      if (titleRef.current && titleRef.current.dataset.gsapOriginal) {
+        titleRef.current.innerHTML = titleRef.current.dataset.gsapOriginal;
+        delete titleRef.current.dataset.gsapOriginal;
+      }
+      ctx.revert();
+    };
   }, []);
 
   return (
     <div ref={sectionRef} className="self-stretch py-8 md:py-10 mx-2 md:mx-0 px-4 md:px-14 rounded-3xl inline-flex flex-col justify-start items-start gap-8 md:gap-12 relative overflow-hidden">
       <img
         src="/images/hero/hero.webp"
-        alt=""
+        alt="INCI Brasil"
         className="absolute inset-0 w-full h-full object-cover"
         style={{ animation: "heroZoom 1.4s cubic-bezier(0.19,1,0.22,1) backwards" }}
       />

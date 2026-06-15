@@ -11,8 +11,14 @@ export default function CoworkingCta() {
   const textRef = useRef<HTMLDivElement>(null);
   const btnRef = useRef<HTMLAnchorElement>(null);
   const btnLabelRef = useRef<HTMLSpanElement>(null);
+  const acRef = useRef<AbortController | null>(null);
 
   const initMagnetic = useCallback(() => {
+    acRef.current?.abort();
+    const ac = new AbortController();
+    acRef.current = ac;
+    const { signal } = ac;
+
     const btn = btnRef.current;
     if (!btn) return;
 
@@ -39,7 +45,7 @@ export default function CoworkingCta() {
           ease: "power2.out",
         });
       }
-    });
+    }, { signal });
 
     btn.addEventListener("mouseleave", () => {
       gsap.to(btn, {
@@ -54,7 +60,7 @@ export default function CoworkingCta() {
           ease: "elastic.out(1, 0.4)",
         });
       }
-    });
+    }, { signal });
   }, []);
 
   useLayoutEffect(() => {
@@ -68,7 +74,7 @@ export default function CoworkingCta() {
         .fromTo(btnRef.current, { opacity: 0, scale: 0.92 }, { opacity: 1, scale: 1, duration: 0.5, ease: "back.out(1.4)" }, "-=0.3")
         .then(initMagnetic);
     }, sectionRef);
-    return () => { ctx.revert(); ScrollTrigger.getAll().forEach((st) => st.kill()); };
+    return () => { acRef.current?.abort(); ScrollTrigger.getAll().forEach((st) => st.kill()); ctx.revert(); };
   }, [initMagnetic]);
 
   return (

@@ -25,8 +25,14 @@ export default function CoworkingIntro() {
   const contentRef = useRef<HTMLDivElement>(null);
   const imgRef = useRef<HTMLImageElement>(null);
   const ctaRef = useRef<HTMLDivElement>(null);
+  const acRef = useRef<AbortController | null>(null);
 
   const initMagnetic = useCallback(() => {
+    acRef.current?.abort();
+    const ac = new AbortController();
+    acRef.current = ac;
+    const { signal } = ac;
+
     const btn = ctaRef.current?.querySelector("a");
     if (!btn) return;
 
@@ -37,10 +43,10 @@ export default function CoworkingIntro() {
       const dx = e.clientX - cx;
       const dy = e.clientY - cy;
       gsap.to(btn, { x: dx * 0.3, y: dy * 0.3, duration: 0.4, ease: "power2.out" });
-    });
+    }, { signal });
     btn.addEventListener("mouseleave", () => {
       gsap.to(btn, { x: 0, y: 0, duration: 0.7, ease: "elastic.out(1, 0.4)" });
-    });
+    }, { signal });
   }, []);
 
   useLayoutEffect(() => {
@@ -56,7 +62,7 @@ export default function CoworkingIntro() {
       if (contentRef.current) tl.fromTo(contentRef.current, { opacity: 0, x: 24 }, { opacity: 1, x: 0, duration: 0.5 }, "-=0.2");
       tl.then(initMagnetic);
     }, sectionRef);
-    return () => { ctx.revert(); ScrollTrigger.getAll().forEach((st) => st.kill()); };
+    return () => { acRef.current?.abort(); ScrollTrigger.getAll().forEach((st) => st.kill()); ctx.revert(); };
   }, [initMagnetic]);
 
   useLayoutEffect(() => {

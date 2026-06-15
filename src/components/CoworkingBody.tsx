@@ -36,6 +36,7 @@ const cards = [
 
 export default function CoworkingBody() {
   const sectionRef = useRef<HTMLDivElement>(null);
+  const acRef = useRef<AbortController | null>(null);
 
   useLayoutEffect(() => {
     const ctx = gsap.context(() => {
@@ -47,6 +48,11 @@ export default function CoworkingBody() {
           stagger: { amount: 0.5, from: "start" },
           scrollTrigger: { trigger: sectionRef.current, start: "top 85%", once: true },
           onComplete: () => {
+            acRef.current?.abort();
+            const ac = new AbortController();
+            acRef.current = ac;
+            const { signal } = ac;
+
             Array.from(els).forEach((card) => {
               const img = card.querySelector("img");
               const content = card.querySelector(".card-content");
@@ -55,14 +61,14 @@ export default function CoworkingBody() {
               if (img) tl.to(img, { scale: 1.04, duration: 0.5 }, 0);
               if (content) tl.to(content, { x: 4, duration: 0.25 }, 0);
 
-              card.addEventListener("mouseenter", () => tl.play());
-              card.addEventListener("mouseleave", () => tl.reverse());
+              card.addEventListener("mouseenter", () => tl.play(), { signal });
+              card.addEventListener("mouseleave", () => tl.reverse(), { signal });
             });
           },
         });
       }
     }, sectionRef);
-    return () => { ctx.revert(); ScrollTrigger.getAll().forEach((st) => st.kill()); };
+    return () => { acRef.current?.abort(); ScrollTrigger.getAll().forEach((st) => st.kill()); ctx.revert(); };
   }, []);
 
   return (

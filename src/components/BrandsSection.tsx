@@ -205,7 +205,7 @@ export default function BrandsSection() {
         scrollTrigger: { trigger: sectionRef.current, start: "top bottom", once: true },
       });
     }, sectionRef);
-    return () => { ctx.revert(); ScrollTrigger.getAll().forEach((st) => st.kill()); };
+    return () => { ScrollTrigger.getAll().forEach((st) => st.kill()); ctx.revert(); };
   }, []);
 
   return (

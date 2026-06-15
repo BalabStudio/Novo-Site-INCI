@@ -71,7 +71,7 @@ export default function CoworkingStructure() {
 
       ScrollTrigger.refresh();
     }, wrapperRef);
-    return () => { ctx.revert(); ScrollTrigger.getAll().forEach((st) => st.kill()); };
+    return () => { ScrollTrigger.getAll().forEach((st) => st.kill()); ctx.revert(); };
   }, []);
 
   return (
