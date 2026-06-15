@@ -36,13 +36,17 @@ export default function CoworkingIntro() {
     const btn = ctaRef.current?.querySelector("a");
     if (!btn) return;
 
+    const setX = gsap.quickSetter(btn, "x", "px");
+    const setY = gsap.quickSetter(btn, "y", "px");
+
     btn.addEventListener("mousemove", (e) => {
       const rect = btn.getBoundingClientRect();
       const cx = rect.left + rect.width / 2;
       const cy = rect.top + rect.height / 2;
       const dx = e.clientX - cx;
       const dy = e.clientY - cy;
-      gsap.to(btn, { x: dx * 0.3, y: dy * 0.3, duration: 0.4, ease: "power2.out" });
+      setX(dx * 0.3);
+      setY(dy * 0.3);
     }, { signal });
     btn.addEventListener("mouseleave", () => {
       gsap.to(btn, { x: 0, y: 0, duration: 0.7, ease: "elastic.out(1, 0.4)" });

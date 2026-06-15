@@ -17,7 +17,7 @@ export default function HeroSection() {
   useEffect(() => {
     const vid = videoRef.current;
     if (!vid) return;
-    const onPause = () => { if (!vid.ended) vid.play(); };
+    const onPause = () => { if (!vid.ended) vid.play().catch(() => {}); };
     vid.addEventListener("pause", onPause);
     return () => vid.removeEventListener("pause", onPause);
   }, []);
@@ -29,24 +29,24 @@ export default function HeroSection() {
       tl.fromTo(
         titleRef.current,
         { opacity: 0, y: 32 },
-        { opacity: 1, y: 0, duration: 0.8 }
+        { opacity: 1, y: 0, duration: 0.8, force3D: true }
       );
       tl.fromTo(
         subRef.current,
         { opacity: 0, y: 20 },
-        { opacity: 1, y: 0, duration: 0.6 },
+        { opacity: 1, y: 0, duration: 0.6, force3D: true },
         "-=0.3"
       );
       tl.fromTo(
         badgeRef.current,
         { opacity: 0, scale: 0.92, y: 16 },
-        { opacity: 1, scale: 1, y: 0, duration: 0.5 },
+        { opacity: 1, scale: 1, y: 0, duration: 0.5, force3D: true },
         "-=0.3"
       );
       tl.fromTo(
         carouselRef.current,
         { opacity: 0, y: 24 },
-        { opacity: 1, y: 0, duration: 0.7, ease: "power2.out" },
+        { opacity: 1, y: 0, duration: 0.7, ease: "power2.out", force3D: true },
         "-=0.3"
       );
     }, rootRef);
@@ -66,9 +66,8 @@ export default function HeroSection() {
           preload="auto"
           className="absolute inset-0 w-full h-full object-cover"
           style={{ animation: "heroZoom 1.4s cubic-bezier(0.19,1,0.22,1) backwards" }}
-          onLoadedMetadata={(e) => { e.currentTarget.currentTime = 20; }}
+          src="https://www.dropbox.com/scl/fi/80cb7ebz1zd7bveclr0rl/Video-Hero_site.mp4?rlkey=a04q0eewrapjwoyd6jaho85zp&st=14d2ypjh&raw=1"
         >
-          <source src="https://www.dropbox.com/scl/fi/g0j7lhe766wd9j22ue6o8/INAUGURADA-A-Inci-Brasil-agora-tem-uma-nova-sede-Esse-pr-dio-muito-mais-do-que-apenas-um.mp4?rlkey=vpop6cikxuax36nd54s3an2pd&st=q91jhycw&dl=1" type="video/mp4" />
           Seu navegador não suporta vídeo.
         </video>
         <div className="absolute inset-0 bg-black/60 z-[1]" />

@@ -29,7 +29,7 @@ export default function CoworkingVisual() {
         tl.fromTo(
           revealEls,
           { opacity: 0, x: -30 },
-          { opacity: 1, x: 0, duration: 0.6, stagger: 0.12 }
+          { opacity: 1, x: 0, duration: 0.6, stagger: 0.12, force3D: true }
         );
       }
       tl.fromTo(
@@ -41,7 +41,7 @@ export default function CoworkingVisual() {
       tl.fromTo(
         imgInnerRef.current,
         { scale: 1.15 },
-        { scale: 1, duration: 0.8, ease: "power4.out" },
+        { scale: 1, duration: 0.8, ease: "power4.out", force3D: true },
         "-=0.8"
       );
     }, sectionRef);

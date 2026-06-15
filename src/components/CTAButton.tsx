@@ -43,11 +43,11 @@ export default function CTAButton({
       tl.fromTo(
         overlay,
         { scale: 0 },
-        { scale: 2.5, duration: 1, ease: "power2.out" },
+        { scale: 2.5, duration: 1, ease: "power2.out", force3D: true },
         0
       );
       if (arrow) {
-        tl.to(arrow, { rotation: 45, duration: 0.6, ease: "power2.out" }, 0);
+        tl.to(arrow, { rotation: 45, duration: 0.6, ease: "power2.out", force3D: true }, 0);
       }
 
       btn.addEventListener("mouseenter", () => tl.play(), { signal });

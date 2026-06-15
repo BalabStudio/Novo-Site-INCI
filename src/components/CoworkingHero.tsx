@@ -1,66 +1,40 @@
 "use client";
 
-import { useEffect, useRef } from "react";
+import { useLayoutEffect, useRef } from "react";
 import gsap from "gsap";
 import Header from "./Header";
 
-function splitSpans(parent: HTMLElement) {
-  if (parent.dataset.gsapOriginal) return [];
-  parent.dataset.gsapOriginal = parent.innerHTML;
-  const children = Array.from(parent.children) as HTMLSpanElement[];
-  const all: HTMLSpanElement[] = [];
-  children.forEach((child) => {
-    const cls = child.className;
-    const txt = child.textContent ?? "";
-    child.textContent = "";
-    child.style.overflow = "hidden";
-    for (const ch of txt) {
-      const s = document.createElement("span");
-      s.textContent = ch === " " ? "\u00A0" : ch;
-      s.className = cls;
-      s.style.display = "inline-block";
-      s.style.overflow = "hidden";
-      s.style.verticalAlign = "top";
-      child.appendChild(s);
-      all.push(s);
-    }
-  });
-  return all;
-}
-
 export default function CoworkingHero() {
   const rootRef = useRef<HTMLDivElement>(null);
-  const titleRef = useRef<HTMLDivElement>(null);
   const subRef = useRef<HTMLDivElement>(null);
   const ctaRef = useRef<HTMLDivElement>(null);
   const eyebrowRef = useRef<HTMLDivElement>(null);
   const videoRef = useRef<HTMLVideoElement>(null);
 
-  useEffect(() => {
+  useLayoutEffect(() => {
     const vid = videoRef.current;
     if (!vid) return;
-    const onPause = () => { if (!vid.ended) vid.play(); };
+    const onPause = () => { if (!vid.ended) vid.play().catch(() => {}); };
     vid.addEventListener("pause", onPause);
     return () => vid.removeEventListener("pause", onPause);
   }, []);
 
-  useEffect(() => {
+  useLayoutEffect(() => {
     const ctx = gsap.context(() => {
-      const chars = titleRef.current ? splitSpans(titleRef.current) : [];
-
       const tl = gsap.timeline({ defaults: { ease: "power3.out" }, delay: 0.1 });
+      const titleLines = rootRef.current?.querySelectorAll('[data-coworking-title] > span') ?? [];
 
       tl
         .fromTo(
           videoRef.current,
           { scale: 1.08, filter: "blur(8px)" },
-          { scale: 1, filter: "blur(0)", duration: 1.2, ease: "power2.out" },
+          { scale: 1, filter: "blur(0)", duration: 1.2, ease: "power2.out", force3D: true },
           0
         )
         .fromTo(
           ".header-wrapper",
           { opacity: 0, y: -12 },
-          { opacity: 1, y: 0, duration: 0.5, clearProps: "transform" },
+          { opacity: 1, y: 0, duration: 0.5, clearProps: "transform", force3D: true },
           "-=0.6"
         )
         .fromTo(
@@ -70,39 +44,32 @@ export default function CoworkingHero() {
           "-=0.3"
         )
         .fromTo(
-          chars,
+          titleLines,
           { y: "110%", opacity: 0, rotateX: -35 },
-          { y: "0%", opacity: 1, rotateX: 0, duration: 0.7, stagger: 0.025, ease: "power4.out" },
+          { y: "0%", opacity: 1, rotateX: 0, duration: 0.7, stagger: 0.15, ease: "power4.out", force3D: true },
           "-=0.2"
         )
         .fromTo(
           subRef.current,
           { opacity: 0, y: 20 },
-          { opacity: 1, y: 0, duration: 0.6 },
+          { opacity: 1, y: 0, duration: 0.6, force3D: true },
           "-=0.3"
         )
         .fromTo(
           ctaRef.current,
           { opacity: 0, scale: 0.92, y: 16 },
-          { opacity: 1, scale: 1, y: 0, duration: 0.5, ease: "back.out(1.4)" },
+          { opacity: 1, scale: 1, y: 0, duration: 0.5, ease: "back.out(1.4)", force3D: true },
           "-=0.3"
         );
     }, rootRef);
 
-    return () => {
-      if (titleRef.current && titleRef.current.dataset.gsapOriginal) {
-        titleRef.current.innerHTML = titleRef.current.dataset.gsapOriginal;
-        delete titleRef.current.dataset.gsapOriginal;
-      }
-      ctx.revert();
-    };
+    return () => ctx.revert();
   }, []);
 
   return (
     <div ref={rootRef} className="self-stretch py-8 md:py-10 mx-2 md:mx-0 px-4 md:px-14 rounded-3xl inline-flex flex-col justify-start items-start gap-8 md:gap-12 relative">
       <div className="absolute inset-0 bg-neutral-900 rounded-3xl overflow-hidden">
-        <video ref={videoRef} autoPlay muted loop playsInline preload="auto" className="absolute inset-0 w-full h-full object-cover">
-          <source src="https://www.dropbox.com/scl/fi/g0j7lhe766wd9j22ue6o8/INAUGURADA-A-Inci-Brasil-agora-tem-uma-nova-sede-Esse-pr-dio-muito-mais-do-que-apenas-um.mp4?rlkey=vpop6cikxuax36nd54s3an2pd&st=q91jhycw&dl=1" type="video/mp4" />
+        <video ref={videoRef} autoPlay muted loop playsInline preload="auto" className="absolute inset-0 w-full h-full object-cover" src="https://www.dropbox.com/scl/fi/80cb7ebz1zd7bveclr0rl/Video-Hero_site.mp4?rlkey=a04q0eewrapjwoyd6jaho85zp&st=14d2ypjh&raw=1">
           Seu navegador não suporta vídeo.
         </video>
         <div className="absolute inset-0 bg-black/60 z-[1]" />
@@ -121,11 +88,11 @@ export default function CoworkingHero() {
                 </div>
               </div>
               <div className="self-stretch flex flex-col justify-start items-start">
-                <div ref={titleRef} className="self-stretch">
-                  <span className="text-orange-400 text-3xl md:text-5xl lg:text-6xl font-medium font-rethink leading-[1.1] md:leading-[64px]">
+                <div data-coworking-title className="self-stretch">
+                  <span className="inline-block overflow-hidden text-orange-400 text-3xl md:text-5xl lg:text-6xl font-medium font-rethink leading-[1.1] md:leading-[64px]">
                     Onde o trabalho
                   </span>
-                  <span className="text-white text-3xl md:text-5xl lg:text-6xl font-medium font-rethink leading-[1.1] md:leading-[64px]">
+                  <span className="inline-block overflow-hidden text-white text-3xl md:text-5xl lg:text-6xl font-medium font-rethink leading-[1.1] md:leading-[64px]">
                     {" "}ganha presença.
                   </span>
                 </div>

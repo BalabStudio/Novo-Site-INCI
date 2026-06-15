@@ -24,6 +24,11 @@ export default function CoworkingCta() {
 
     const strength = { btn: 0.35, label: 0.2 };
 
+    const btnSetX = gsap.quickSetter(btn, "x", "px");
+    const btnSetY = gsap.quickSetter(btn, "y", "px");
+    const labelSetX = btnLabelRef.current ? gsap.quickSetter(btnLabelRef.current, "x", "px") : null;
+    const labelSetY = btnLabelRef.current ? gsap.quickSetter(btnLabelRef.current, "y", "px") : null;
+
     btn.addEventListener("mousemove", (e) => {
       const rect = btn.getBoundingClientRect();
       const cx = rect.left + rect.width / 2;
@@ -31,19 +36,11 @@ export default function CoworkingCta() {
       const dx = e.clientX - cx;
       const dy = e.clientY - cy;
 
-      gsap.to(btn, {
-        x: dx * strength.btn,
-        y: dy * strength.btn,
-        duration: 0.4,
-        ease: "power2.out",
-      });
-      if (btnLabelRef.current) {
-        gsap.to(btnLabelRef.current, {
-          x: dx * strength.label,
-          y: dy * strength.label,
-          duration: 0.4,
-          ease: "power2.out",
-        });
+      btnSetX(dx * strength.btn);
+      btnSetY(dy * strength.btn);
+      if (labelSetX && labelSetY) {
+        labelSetX(dx * strength.label);
+        labelSetY(dy * strength.label);
       }
     }, { signal });
 

@@ -60,12 +60,12 @@ export default function CoworkingStructure() {
       cards.forEach((card, i) => {
         tl.fromTo(card,
           { autoAlpha: 0, y: 80, scale: 0.88 },
-          { autoAlpha: 1, y: 0, scale: 1, duration: 0.85, ease: "power4.out" },
+          { autoAlpha: 1, y: 0, scale: 1, duration: 0.85, ease: "power4.out", force3D: true },
           i * 0.3
         );
         const img = card.querySelector("img");
         if (img) {
-          tl.to(img, { scale: 1, duration: 1.1, ease: "power4.out" }, i * 0.3);
+          tl.to(img, { scale: 1, duration: 1.1, ease: "power4.out", force3D: true }, i * 0.3);
         }
       });
 

@@ -53,7 +53,7 @@ export default function CoworkingBenefits() {
               const iconWrap = card.querySelector(".benefit-icon");
               const title = card.querySelector(".benefit-title");
 
-              const tl = gsap.timeline({ paused: true, defaults: { ease: "power3.out" } });
+              const tl = gsap.timeline({ paused: true, defaults: { ease: "power3.out", force3D: true } });
               tl.to(card, { scale: 1.02, duration: 0.3 }, 0)
                 .to(iconWrap, { scale: 1.1, duration: 0.3 }, 0)
                 .to(title, { x: 4, duration: 0.25 }, 0);

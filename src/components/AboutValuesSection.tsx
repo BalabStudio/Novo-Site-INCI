@@ -39,6 +39,7 @@ export default function AboutValuesSection() {
         duration: speeds[i],
         ease: "none",
         repeat: -1,
+        force3D: true,
         modifiers: {
           x: (x) => parseFloat(x) % tw + "px",
         },

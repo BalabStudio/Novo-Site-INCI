@@ -22,7 +22,7 @@ export default function CoworkingManifesto() {
         .fromTo(
           textRef.current,
           { opacity: 0, x: -24 },
-          { opacity: 1, x: 0, duration: 0.6 }
+          { opacity: 1, x: 0, duration: 0.6, force3D: true }
         )
         .fromTo(
           imageRef.current,
@@ -33,7 +33,7 @@ export default function CoworkingManifesto() {
         .fromTo(
           mainImgRef.current,
           { scale: 1.1 },
-          { scale: 1, duration: 0.8, ease: "power4.out" },
+          { scale: 1, duration: 0.8, ease: "power4.out", force3D: true },
           "-=0.8"
         );
     }, sectionRef);

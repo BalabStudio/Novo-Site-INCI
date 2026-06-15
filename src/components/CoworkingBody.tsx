@@ -57,7 +57,7 @@ export default function CoworkingBody() {
               const img = card.querySelector("img");
               const content = card.querySelector(".card-content");
 
-              const tl = gsap.timeline({ paused: true, defaults: { ease: "power3.out" } });
+              const tl = gsap.timeline({ paused: true, defaults: { ease: "power3.out", force3D: true } });
               if (img) tl.to(img, { scale: 1.04, duration: 0.5 }, 0);
               if (content) tl.to(content, { x: 4, duration: 0.25 }, 0);
 

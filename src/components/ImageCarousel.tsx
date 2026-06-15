@@ -20,20 +20,23 @@ export default function ImageCarousel() {
 
     const tw = track.scrollWidth / 2;
 
-    gsap.to(track, {
+    const tween = gsap.to(track, {
       x: -tw,
       duration: 20,
       ease: "none",
       repeat: -1,
+      force3D: true,
       modifiers: {
         x: (x) => parseFloat(x) % tw + "px",
       },
     });
+
+    return () => { tween.kill(); };
   }, []);
 
   return (
     <div className="relative overflow-hidden -mx-14">
-      <div ref={trackRef} className="inline-flex justify-start items-start gap-5">
+      <div ref={trackRef} className="inline-flex justify-start items-start gap-5" style={{ willChange: "transform" }}>
         {[...images, ...images].map((img, i) => (
           <img key={i < images.length ? `a-${i}` : `b-${i - images.length}`} src={img} alt={`Galeria ${(i % images.length) + 1}`} className="rounded-3xl" />
         ))}

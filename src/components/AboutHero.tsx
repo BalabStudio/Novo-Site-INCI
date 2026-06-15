@@ -1,25 +1,8 @@
 "use client";
 
-import { useRef, useEffect } from "react";
+import { useRef, useLayoutEffect } from "react";
 import gsap from "gsap";
 import Header from "./Header";
-
-function splitText(el: HTMLElement) {
-  if (el.dataset.gsapOriginal) return [];
-  el.dataset.gsapOriginal = el.innerHTML;
-  const text = el.textContent!.trim();
-  el.textContent = "";
-  el.style.overflow = "hidden";
-  return text.split("").map((char, i) => {
-    const span = document.createElement("span");
-    span.textContent = char === " " ? "\u00A0" : char;
-    span.style.display = "inline-block";
-    span.style.overflow = "hidden";
-    span.style.verticalAlign = "top";
-    el.appendChild(span);
-    return span;
-  });
-}
 
 export default function AboutHero() {
   const sectionRef = useRef<HTMLDivElement>(null);
@@ -27,30 +10,24 @@ export default function AboutHero() {
   const p1Ref = useRef<HTMLDivElement>(null);
   const p2Ref = useRef<HTMLDivElement>(null);
   const p3Ref = useRef<HTMLDivElement>(null);
-  useEffect(() => {
-    const ctx = gsap.context(() => {
-      const chars = titleRef.current ? splitText(titleRef.current) : [];
 
+  useLayoutEffect(() => {
+    const ctx = gsap.context(() => {
       const tl = gsap.timeline({ defaults: { ease: "power3.out" }, delay: 0.1 });
 
       tl
         .fromTo(
-          chars,
+          titleRef.current ? Array.from(titleRef.current.children) : [],
           { y: "110%", opacity: 0, rotateX: -35 },
-          { y: "0%", opacity: 1, rotateX: 0, duration: 0.7, stagger: 0.03, ease: "power4.out" },
+          { y: "0%", opacity: 1, rotateX: 0, duration: 0.7, stagger: 0.03, ease: "power4.out", force3D: true },
           "-=0.2"
         )
-        .fromTo(p1Ref.current, { opacity: 0, y: 24 }, { opacity: 1, y: 0, duration: 0.6 }, "-=0.35")
-        .fromTo(p2Ref.current, { opacity: 0, y: 20 }, { opacity: 1, y: 0, duration: 0.55 }, "-=0.25")
-        .fromTo(p3Ref.current, { opacity: 0, y: 20 }, { opacity: 1, y: 0, duration: 0.55 }, "-=0.25");
+        .fromTo(p1Ref.current, { opacity: 0, y: 24 }, { opacity: 1, y: 0, duration: 0.6, force3D: true }, "-=0.35")
+        .fromTo(p2Ref.current, { opacity: 0, y: 20 }, { opacity: 1, y: 0, duration: 0.55, force3D: true }, "-=0.25")
+        .fromTo(p3Ref.current, { opacity: 0, y: 20 }, { opacity: 1, y: 0, duration: 0.55, force3D: true }, "-=0.25");
     }, sectionRef);
-    return () => {
-      if (titleRef.current && titleRef.current.dataset.gsapOriginal) {
-        titleRef.current.innerHTML = titleRef.current.dataset.gsapOriginal;
-        delete titleRef.current.dataset.gsapOriginal;
-      }
-      ctx.revert();
-    };
+
+    return () => ctx.revert();
   }, []);
 
   return (
@@ -65,7 +42,13 @@ export default function AboutHero() {
         <Header />
         <div className="self-stretch flex flex-col justify-start items-start gap-4 max-w-[800px]">
           <div className="flex flex-col justify-start items-start">
-            <div ref={titleRef} className="text-white text-2xl md:text-4xl lg:text-5xl font-semibold font-rethink leading-[1.2] md:leading-[48px]">Sobre a INCI</div>
+            <div ref={titleRef} className="text-white text-2xl md:text-4xl lg:text-5xl font-semibold font-rethink leading-[1.2] md:leading-[48px]">
+              <span className="inline-block overflow-hidden">Sobre</span>
+              {" "}
+              <span className="inline-block overflow-hidden">a</span>
+              {" "}
+              <span className="inline-block overflow-hidden">INCI</span>
+            </div>
           </div>
           <div ref={p1Ref} className="self-stretch">
             <div className="text-stone-300 text-base md:text-lg font-normal font-rethink leading-6 md:leading-7">
