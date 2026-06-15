@@ -200,8 +200,7 @@ export default function NumbersSection() {
         </div>
       </div>
       <div data-cta-reveal className="w-full flex flex-col md:flex-row justify-center items-center md:items-start gap-3 md:gap-5">
-        <CTAButton />
-        <CTAButton variant="gray">Conheça nossas soluções<br />para a sua empresa</CTAButton>
+        <CTAButton href="https://wa.me/5588981527958" />
       </div>
     </div>
   );

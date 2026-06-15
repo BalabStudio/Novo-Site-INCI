@@ -69,7 +69,7 @@ export default function Footer() {
             </div>
             <div data-reveal className="inline-flex flex-col justify-start items-start gap-3">
               <div className="text-white text-sm md:text-base font-normal font-rethink leading-5">WhatsApp</div>
-              <div className="text-white text-base md:text-lg font-bold font-rethink leading-5">(88) 99384-1783</div>
+              <a href="https://wa.me/5588981527958" target="_blank" rel="noopener noreferrer" className="text-white text-base md:text-lg font-bold font-rethink leading-5 hover:text-orange-400 transition-colors">(88) 98152-7958</a>
             </div>
             <div data-reveal className="inline-flex flex-col justify-start items-start gap-3">
               <div ref={iconsRef} className="h-6 inline-flex justify-start items-start gap-4">

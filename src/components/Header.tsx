@@ -39,24 +39,23 @@ export default function Header() {
                 <span className="absolute bottom-2 left-1/2 -translate-x-1/2 w-0 h-0.5 bg-white rounded-full group-hover:w-3/4 transition-all duration-300 ease-out" />
               </button>
             </div>
-            <div className="group relative px-3 pt-2.5 pb-3 flex justify-center items-center cursor-pointer">
-              <div className="text-center text-white text-base font-normal font-rethink uppercase leading-6 tracking-widest group-hover:-translate-y-0.5 transition-transform duration-300">Blog</div>
+            <a href="/coworking" className="group relative px-3 pt-2.5 pb-3 flex justify-center items-center">
+              <div className="text-center text-white text-base font-normal font-rethink uppercase leading-6 tracking-widest group-hover:-translate-y-0.5 transition-transform duration-300">Coworking</div>
               <span className="absolute bottom-2 left-1/2 -translate-x-1/2 w-0 h-0.5 bg-white rounded-full group-hover:w-3/4 transition-all duration-300 ease-out" />
-            </div>
+            </a>
           </div>
           {solucoesOpen && (
             <div className="absolute top-full left-1/2 -translate-x-1/2 bg-neutral-800 rounded-2xl px-4 py-4 grid grid-cols-2 gap-3 z-[9999] border border-white/15 shadow-lg"
               onMouseLeave={() => setSolucoesOpen(false)}>
               <a href="#" className="text-white text-base font-normal font-rethink uppercase leading-6 tracking-widest px-3 py-2 hover:bg-white/10 rounded-lg">Educação</a>
               <a href="#" className="text-white text-base font-normal font-rethink uppercase leading-6 tracking-widest px-3 py-2 hover:bg-white/10 rounded-lg">Tecnologia</a>
-              <a href="/coworking" className="text-white text-base font-normal font-rethink uppercase leading-6 tracking-widest px-3 py-2 hover:bg-white/10 rounded-lg">Coworking</a>
               <a href="#" className="text-white text-base font-normal font-rethink uppercase leading-6 tracking-widest px-3 py-2 hover:bg-white/10 rounded-lg">Eventos</a>
             </div>
           )}
         </div>
       </div>
       <div className="hidden md:flex justify-center items-center">
-        <CTAButton pill sectionId="pricing-section">Quero Conhecer</CTAButton>
+        <CTAButton pill href="https://wa.me/5588981527958">Fale com a gente</CTAButton>
       </div>
       <button onClick={() => { setMobileOpen(!mobileOpen); setSolucoesOpen(false); }} className="md:hidden size-10 flex justify-center items-center text-white">
         <svg className="size-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
@@ -91,14 +90,13 @@ export default function Header() {
                 <div className="mt-3 pl-4 flex flex-col gap-3 border-l border-white/20 bg-neutral-900">
                   <a href="#" className="text-white/80 text-base font-normal font-rethink uppercase tracking-widest hover:text-white">Educação</a>
                   <a href="#" className="text-white/80 text-base font-normal font-rethink uppercase tracking-widest hover:text-white">Tecnologia</a>
-                  <a href="/coworking" className="text-white/80 text-base font-normal font-rethink uppercase tracking-widest hover:text-white">Coworking</a>
                   <a href="#" className="text-white/80 text-base font-normal font-rethink uppercase tracking-widest hover:text-white">Eventos</a>
                 </div>
               )}
             </div>
-            <a href="#" className="text-white text-xl font-normal font-rethink uppercase tracking-widest">Blog</a>
+            <a href="/coworking" className="text-white text-xl font-normal font-rethink uppercase tracking-widest">Coworking</a>
             <div className="mt-4">
-              <CTAButton pill sectionId="pricing-section">Quero Conhecer</CTAButton>
+              <CTAButton pill href="https://wa.me/5588981527958">Fale com a gente</CTAButton>
             </div>
           </nav>
         </div>

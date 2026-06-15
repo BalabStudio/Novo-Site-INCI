@@ -8,19 +8,19 @@ gsap.registerPlugin(ScrollTrigger);
 
 const testimonials = [
   {
-    quote: "“Os cursos oferecidos são essenciais para quem busca aprimorar suas práticas pedagógicas.”",
-    name: "Carol Santos",
-    role: "Aluna - SóEducador",
+    quote: "“Contratamos a INCI para organizar um evento de capacitação para nossa equipe e o resultado foi excelente. Toda a estrutura, desde o planejamento até a execução, foi conduzida com profissionalismo e atenção aos detalhes. Os participantes elogiaram a qualidade da experiência e já estamos planejando novas ações em parceria.”",
+    name: "Carlos Mendes",
+    role: "Gerente de RH - Corporativo",
   },
   {
-    quote: "“A INCI transformou a forma como nossa organização lida com inovação e tecnologia.”",
-    name: "Rafael Oliveira",
-    role: "CEO - TechSolutions",
+    quote: "“Nossa empresa procurava uma solução baseada em inteligência artificial para otimizar processos internos e a equipe da INCI apresentou uma proposta personalizada que atendeu plenamente às nossas necessidades. O suporte durante a implantação foi excelente e os ganhos de produtividade foram percebidos rapidamente.”",
+    name: "Ana Beatriz",
+    role: "Diretora de Inovação",
   },
   {
-    quote: "“Experiência incrível! Os eventos presenciais são maravilhosos e o conteúdo é de primeira.”",
-    name: "Juliana Mendes",
-    role: "Diretora - EducaMais",
+    quote: "“Escolhemos a INCI para desenvolver um programa de capacitação voltado aos nossos colaboradores e a experiência superou as expectativas. Os treinamentos foram bem estruturados, com conteúdo relevante e metodologia dinâmica, proporcionando um impacto positivo no desempenho da equipe e na cultura de aprendizado da empresa.”",
+    name: "Fernando Alves",
+    role: "Coordenador de Treinamento",
   },
 ];
 
@@ -123,7 +123,7 @@ export default function TestimonialsSection() {
                           <path d="M21 11h-3.5A2.5 2.5 0 0 1 20 8.5V7a4 4 0 0 0-4 4v5a2 2 0 0 0 2 2h3a2 2 0 0 0 2-2v-3a2 2 0 0 0-2-2z" />
                         </svg>
                       </div>
-                      <div ref={quoteRef} className="self-stretch text-black text-base md:text-xl font-medium font-rethink text-center leading-5 md:leading-7">
+                      <div ref={quoteRef} className="self-stretch text-black text-sm md:text-base font-medium font-rethink text-center leading-5 md:leading-6">
                         {t.quote}
                       </div>
                       <div ref={nameRef} className="self-stretch flex flex-col justify-center items-center">
@@ -145,7 +145,7 @@ export default function TestimonialsSection() {
                       </div>
                     </div>
                   </div>
-                  <div ref={imageRef} className="w-full md:w-[240px] aspect-square relative rounded-xl overflow-hidden">
+                  <div ref={imageRef} className="w-full md:w-[240px] self-stretch relative rounded-xl overflow-hidden">
                     <img className="w-full h-full object-cover" src={`https://placehold.co/608x486?text=${encodeURIComponent(t.name)}`} alt={t.name} />
                   </div>
                 </div>

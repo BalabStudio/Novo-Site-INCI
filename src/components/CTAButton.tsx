@@ -6,18 +6,21 @@ export default function CTAButton({
   children = "Fale com a gente",
   variant = "blue",
   sectionId = "pricing-section",
+  href,
   pill,
   className,
 }: {
   children?: ReactNode;
   variant?: "blue" | "gray";
   sectionId?: string;
+  href?: string;
   pill?: boolean;
   className?: string;
 }) {
   const btnRef = useRef<HTMLAnchorElement>(null);
 
-  const handleScroll = (e: React.MouseEvent) => {
+  const handleClick = (e: React.MouseEvent) => {
+    if (href) return;
     e.preventDefault();
     const el = document.getElementById(sectionId);
     if (el) el.scrollIntoView({ behavior: "smooth" });
@@ -59,8 +62,9 @@ export default function CTAButton({
   return (
     <a
       ref={btnRef}
-      href={`#${sectionId}`}
-      onClick={handleScroll}
+      href={href || `#${sectionId}`}
+      onClick={handleClick}
+      {...(href ? { target: "_blank", rel: "noopener noreferrer" } : {})}
       className={`w-full md:w-auto ${className ?? ""}`}
     >
       {pill ? (

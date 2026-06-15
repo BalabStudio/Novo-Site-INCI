@@ -70,9 +70,9 @@ const brands: BrandTab[] = [
         logo: "/images/logos/logo_soeducador.webp",
         logoClass: "h-20",
         links: [
-          { type: "site", url: "#" },
-          { type: "instagram", url: "#" },
-          { type: "youtube", url: "#" },
+          { type: "site", url: "https://soeducador.com.br/" },
+          { type: "instagram", url: "https://www.instagram.com/soeducador/" },
+          { type: "youtube", url: "https://www.youtube.com/@soeducador" },
         ],
       },
       {
@@ -81,9 +81,9 @@ const brands: BrandTab[] = [
         logo: "/images/logos/logo_estutus.webp",
         logoClass: "h-20",
         links: [
-          { type: "site", url: "#" },
-          { type: "instagram", url: "#" },
-          { type: "youtube", url: "#" },
+          { type: "site", url: "https://estetus.com.br/" },
+          { type: "instagram", url: "https://www.instagram.com/estetus.saude" },
+          { type: "youtube", url: "https://www.youtube.com/@estetussaude/videos" },
         ],
       },
     ],
@@ -100,8 +100,8 @@ const brands: BrandTab[] = [
         logo: "/images/logos/logo_educday.webp",
         logoClass: "h-20",
         links: [
-          { type: "site", url: "#" },
-          { type: "instagram", url: "#" },
+          { type: "site", url: "https://educday.com.br/" },
+          { type: "instagram", url: "https://www.instagram.com/educday/" },
         ],
       },
       {
@@ -110,8 +110,8 @@ const brands: BrandTab[] = [
         logo: "/images/logos/logo_cliniSummit.webp",
         logoClass: "h-20",
         links: [
-          { type: "site", url: "#" },
-          { type: "instagram", url: "#" },
+          { type: "site", url: "https://clinisummit.com.br/" },
+          { type: "instagram", url: "https://www.instagram.com/clinisummit/" },
         ],
       },
     ],
@@ -128,13 +128,16 @@ const brands: BrandTab[] = [
         logo: "/images/logos/logo_atalia.webp",
         logoClass: "h-20",
         links: [
-          { type: "site", url: "#" },
-          { type: "instagram", url: "#" },
+          { type: "site", url: "https://atalia.com.br/" },
+          { type: "instagram", url: "https://www.instagram.com/atalia.ai/" },
+          { type: "whatsapp", url: "https://wa.me/5588981527958", phone: "88 98152-7958" },
         ],
       },
       {
         name: "Inci Recruta",
         description: "A Inci Recruta é o serviço de recrutamento e seleção do Grupo INCI, especializado na conexão entre talentos e oportunidades no mercado de trabalho. Com processos seletivos humanizados e alinhados às necessidades de cada empresa, a Inci Recruta identifica profissionais que se encaixam na cultura e nos objetivos organizacionais.<br/><br/>Atuamos com agilidade e transparência, oferecendo desde a triagem de currículos até a entrevista final, garantindo que cada contratação seja um passo estratégico para o crescimento da sua empresa.",
+        logo: "/images/logos/INCI_Recruta.webp",
+        logoClass: "h-20",
         links: [
           { type: "whatsapp", url: "https://wa.me/5588988893564", phone: "88 9 8889-3564" },
         ],
@@ -154,7 +157,7 @@ const brands: BrandTab[] = [
         logoClass: "h-20",
         links: [
           { type: "whatsapp", url: "https://wa.me/5588993483974", phone: "88 9 9348-3974" },
-          { type: "instagram", url: "#" },
+          { type: "instagram", url: "https://www.instagram.com/clbproducoes/" },
         ],
       },
       {
@@ -164,8 +167,8 @@ const brands: BrandTab[] = [
         logoClass: "h-20",
         links: [
           { type: "whatsapp", url: "https://wa.me/5588988893564", phone: "88 9 8889-3564" },
-          { type: "instagram", url: "#" },
-          { type: "site", url: "#" },
+          { type: "instagram", url: "https://www.instagram.com/zamply.producoes/" },
+          { type: "site", url: "https://producoes.zamply.com.br/" },
         ],
       },
     ],
@@ -256,7 +259,7 @@ export default function BrandsSection() {
                             <div className="text-zinc-500 text-sm font-medium font-rethink uppercase tracking-widest">Conheça melhor</div>
                             <div className="inline-flex justify-start items-center gap-2.5">
                               {socialLinks.map((link, i) => (
-                                <a key={i} href={link.url} className="size-9 bg-zinc-100 rounded-xl inline-flex justify-center items-center text-zinc-600 hover:bg-brand-blue hover:text-white transition-colors">
+                                <a key={i} href={link.url} target="_blank" rel="noopener noreferrer" className="size-9 bg-zinc-100 rounded-xl inline-flex justify-center items-center text-zinc-600 hover:bg-brand-blue hover:text-white transition-colors">
                                   {icons[link.type]}
                                 </a>
                               ))}
