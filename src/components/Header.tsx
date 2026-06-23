@@ -54,7 +54,7 @@ export default function Header() {
         </div>
       </div>
       <div className="hidden md:flex justify-center items-center">
-        <CTAButton pill href="https://wa.me/5588981527958">Fale com a gente</CTAButton>
+        <CTAButton pill href="https://wa.me/5588993841784">Fale com a gente</CTAButton>
       </div>            <button onClick={() => { setMobileOpen(!mobileOpen); }} className="md:hidden size-10 flex justify-center items-center text-white">
         <svg className="size-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
           {mobileOpen ? (
@@ -94,7 +94,7 @@ export default function Header() {
             </div> */}
             <a href="/coworking" className="text-white text-xl font-normal font-rethink uppercase tracking-widest">Coworking</a>
             <div className="mt-4">
-              <CTAButton pill href="https://wa.me/5588981527958">Fale com a gente</CTAButton>
+              <CTAButton pill href="https://wa.me/5588993841784">Fale com a gente</CTAButton>
             </div>
           </nav>
         </div>
