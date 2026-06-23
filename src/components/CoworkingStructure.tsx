@@ -23,19 +23,19 @@ const spaces = [
     name: "Cabines privativas",
     desc: "Para conversas que exigem foco total. Isolamento acústico e privacidade para calls e deep work.",
     icon: "M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z",
-    img: "/images/cards/cabine.webp",
+    img: "/images/cards/_coworking_ sala privativa.webp",
   },
   {
     name: "Auditório",
     desc: "Para apresentações que merecem atenção. Capacidade para 80 pessoas, som e projeção profissionais.",
     icon: "M15 10l4.553-2.276A1 1 0 0 1 21 8.618v6.764a1 1 0 0 1-1.447.894L15 14M5 18h8a2 2 0 0 0 2-2V8a2 2 0 0 0-2-2H5a2 2 0 0 0-2 2v8a2 2 0 0 0 2 2z",
-    img: "/images/cards/auditorio.webp",
+    img: "/images/cards/_coworking_ auditório.webp",
   },
   {
     name: "Ambientes de gravação",
     desc: "Para produção de conteúdo com qualidade profissional. Acústica tratada e equipamento disponível.",
     icon: "M19 21v-2a4 4 0 0 0-4-4H9a4 4 0 0 0-4 4v2 M9 7a4 4 0 1 0 8 0 4 4 0 0 0-8 0z",
-    img: "/images/cards/gravacao.webp",
+    img: "/images/cards/_coworking_ambiente de gravação.webp",
   },
 ];
 

@@ -107,21 +107,23 @@ export default function NumbersSection() {
         );
       }
 
-      const numEl = cardsRef.current?.querySelector("[data-count]");
-      if (numEl) {
-        const raw = numEl.getAttribute("data-count") || "0";
-        const target = parseInt(raw.replace(/[^\d]/g, ""), 10);
-        const prefix = raw.startsWith("+") ? "+" : "";
-        const obj = { val: 0 };
-        gsap.to(obj, {
-          val: target,
-          duration: 1.8,
-          delay: 0.6,
-          ease: "power4.out",
-          onUpdate: () => {
-            numEl.textContent = prefix + Math.round(obj.val).toLocaleString("pt-BR");
-          },
-          scrollTrigger: { trigger: cardsRef.current, start: "top bottom", once: true },
+      const numEls = cardsRef.current?.querySelectorAll("[data-count]");
+      if (numEls?.length) {
+        numEls.forEach((numEl) => {
+          const raw = numEl.getAttribute("data-count") || "0";
+          const target = parseInt(raw.replace(/[^\d]/g, ""), 10);
+          const prefix = raw.startsWith("+") ? "+" : "";
+          const obj = { val: 0 };
+          gsap.to(obj, {
+            val: target,
+            duration: 1.8,
+            delay: 0.6,
+            ease: "power4.out",
+            onUpdate: () => {
+              numEl.textContent = prefix + Math.round(obj.val).toLocaleString("pt-BR");
+            },
+            scrollTrigger: { trigger: cardsRef.current, start: "top bottom", once: true },
+          });
         });
       }
     }, sectionRef);
@@ -148,7 +150,8 @@ export default function NumbersSection() {
           <div className="flex flex-col justify-start items-start">
             <div className="self-stretch inline-flex justify-start items-center gap-1">
               <div className="inline-flex flex-col justify-start items-start">
-                <div data-anim="fade-up" className="text-black text-lg font-normal font-rethink leading-4">Atuação na América do Sul</div>
+                <div data-anim="fade-up" className="text-black text-lg md:text-xl font-normal font-rethink leading-5">Mais de <span className="font-semibold">3 Milhões</span> de Alunos</div>
+                <div data-anim="fade-up" className="text-black text-xs font-normal font-rethink leading-4 mt-1.5">na América do Sul</div>
               </div>
             </div>
           </div>
@@ -167,27 +170,33 @@ export default function NumbersSection() {
                 ))}
               </div>
             ))}
-            <div className="w-12 h-28 left-0 top-0 absolute bg-gradient-to-r from-gray-200 to-gray-200/0 pointer-events-none" />
-            <div className="w-12 h-28 right-0 top-0 absolute bg-gradient-to-l from-gray-200 to-gray-200/0 pointer-events-none" />
+            <div className="w-20 h-28 left-0 top-0 absolute bg-gradient-to-r from-gray-200 to-gray-200/0 pointer-events-none" />
+            <div className="w-20 h-28 right-0 top-0 absolute bg-gradient-to-l from-gray-200 to-gray-200/0 pointer-events-none" />
           </div>
         </div>
-        <div className="lg:flex-1 self-stretch min-h-[200px] lg:h-72 p-5 relative rounded-3xl inline-flex flex-col justify-start items-start overflow-hidden bg-neutral-900">
-          <img ref={imgRef} className="w-full h-full left-0 top-0 absolute object-cover" src="/images/cards/card_projetos.webp" alt="Projetos em educação e tecnologia" />
-          <div className="self-stretch flex flex-col justify-start items-start">
+        <div className="lg:flex-1 self-stretch min-h-[200px] lg:h-72 p-5 relative rounded-3xl inline-flex flex-col justify-between items-start overflow-hidden bg-neutral-900">
+          <img ref={imgRef} className="w-full h-full left-0 top-0 absolute object-cover opacity-40" src="/images/cards/card_projetos.webp" alt="Projetos em educação e tecnologia" />
+          <div className="self-stretch flex flex-col justify-start items-start relative z-10">
             <div className="self-stretch inline-flex justify-start items-center gap-1">
-              <div className="flex-1 inline-flex flex-col justify-start items-start">
-                <div data-anim="fade-up" className="self-stretch text-white text-2xl md:text-4xl font-normal font-rethink leading-8 md:leading-10">Projetos em educação e tecnologia</div>
+              <div className="inline-flex flex-col justify-start items-start">
+                <div data-anim="scale-up" data-count="+2.000.000" className="self-stretch text-white text-2xl md:text-4xl font-medium font-rethink leading-8 md:leading-10">+2.000.000</div>
               </div>
             </div>
           </div>
+          <div className="self-stretch flex flex-col justify-start items-start gap-1 relative z-10">
+            <div data-anim="fade-up" className="self-stretch text-white text-xl md:text-2xl font-normal font-rethink leading-7 md:leading-8">certificações geradas</div>
+            <div data-anim="fade-up" className="self-stretch text-white/70 text-sm font-normal font-rethink leading-4">Sendo a EDTECH com Maior impacto dentro do Território Nacional.</div>
+          </div>
         </div>
         <div className="lg:flex-1 self-stretch min-h-[140px] lg:h-72 px-5 py-5 bg-gray-200 rounded-3xl inline-flex flex-col justify-start items-start overflow-hidden">
-          <div className="self-stretch inline-flex justify-start items-center gap-1">
-            <div className="flex-1 inline-flex flex-col justify-start items-start">
-              <div data-anim="slide-right" className="self-stretch text-black text-2xl md:text-4xl font-medium font-rethink leading-8 md:leading-10">Experiências presenciais e online</div>
+          <div className="self-stretch flex flex-col justify-start items-start gap-1.5">
+            <div className="self-stretch inline-flex justify-start items-center gap-1">
+              <div className="flex-1 inline-flex flex-col justify-start items-start">
+                <div data-anim="slide-right" className="self-stretch text-black text-2xl md:text-4xl font-medium font-rethink leading-8 md:leading-10">Mais de <span className="font-semibold">60</span> colaboradores</div>
+              </div>
             </div>
+            <div data-anim="fade-up" className="self-stretch text-black text-base md:text-lg font-normal font-rethink leading-4">Diretos e indiretos</div>
           </div>
-          <div className="w-64 h-12 pr-1" />
         </div>
         <div className="lg:flex-1 self-stretch min-h-[140px] lg:h-72 px-5 py-5 bg-blue-500 rounded-3xl inline-flex flex-col justify-between items-start overflow-hidden">
           <div className="self-stretch inline-flex justify-start items-center gap-1">
@@ -196,7 +205,7 @@ export default function NumbersSection() {
             </div>
           </div>
           <div className="self-stretch flex flex-col justify-start items-start">
-            <div data-anim="fade-up" className="self-stretch text-black text-base md:text-lg font-normal font-rethink leading-4">Impactadas com eventos e conferências presencial</div>
+            <div data-anim="fade-up" className="self-stretch text-black text-base md:text-lg font-normal font-rethink leading-4">Mais de 15 mil pessoas Impactadas com eventos e conferências presencial</div>
           </div>
         </div>
       </div>

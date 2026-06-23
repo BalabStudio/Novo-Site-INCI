@@ -11,27 +11,27 @@ const services = [
   {
     title: "Educação e Desenvolvimento",
     description: "Criamos formações, treinamentos, programas educacionais e experiências de aprendizagem voltadas para profissionais, empresas e instituições que desejam evoluir continuamente.",
-    img: "/images/cards/card_img1.webp",
+    img: "/images/cards/_Quem somos_ Educação e Desenvolvimento.webp",
   },
   {
     title: "Eventos e Experiências",
     description: "Produzimos congressos, summits e experiências imersivas que conectam conhecimento, networking, inovação e transformação profissional.",
-    img: "/images/cards/card_img2.webp",
+    img: "/images/cards/_Quem somos_ Eventos e Experiências.webp",
   },
   {
     title: "Tecnologia e Inovação",
     description: "Desenvolvemos soluções digitais, plataformas educacionais, automações e agentes de inteligência artificial aplicados à educação, atendimento e experiência do usuário.",
-    img: "/images/cards/card_img3.webp",
+    img: "/images/cards/_Quem somos_ Tecnologia e Inovação.webp",
   },
   {
     title: "Estratégia e Crescimento",
     description: "Apoiamos empresas e projetos na estruturação de processos, cultura, gestão, posicionamento e desenvolvimento organizacional.",
-    img: "/images/cards/card_img4.webp",
+    img: "/images/cards/_Quem somos_ Estratégia e Crescimento.webp",
   },
   {
     title: "Comunicação e Audiovisual",
     description: "Transformamos ideias em narrativas fortes através de produção audiovisual, branding, campanhas e experiências visuais que fortalecem marcas e movimentos.",
-    img: "/images/cards/card_img5.webp",
+    img: "/images/cards/_Quem somos_ Comunicação e Audiovisual.webp",
   },
 ];
 

@@ -4,7 +4,6 @@ import { useState } from "react";
 import CTAButton from "./CTAButton";
 
 export default function Header() {
-  const [solucoesOpen, setSolucoesOpen] = useState(false);
   const [mobileOpen, setMobileOpen] = useState(false);
 
   return (
@@ -27,7 +26,7 @@ export default function Header() {
               <div className="text-center text-white text-base font-normal font-rethink uppercase leading-6 tracking-widest group-hover:-translate-y-0.5 transition-transform duration-300">Trabalhe conosco</div>
               <span className="absolute bottom-2 left-1/2 -translate-x-1/2 w-0 h-0.5 bg-white rounded-full group-hover:w-3/4 transition-all duration-300 ease-out" />
             </div>
-            <div className="relative">
+            {/* <div className="relative">
               <button
                 onClick={() => setSolucoesOpen(!solucoesOpen)}
                 className="group p-3 inline-flex justify-center items-center gap-2"
@@ -38,26 +37,25 @@ export default function Header() {
                 </svg>
                 <span className="absolute bottom-2 left-1/2 -translate-x-1/2 w-0 h-0.5 bg-white rounded-full group-hover:w-3/4 transition-all duration-300 ease-out" />
               </button>
-            </div>
+            </div> */}
             <a href="/coworking" className="group relative px-3 pt-2.5 pb-3 flex justify-center items-center">
               <div className="text-center text-white text-base font-normal font-rethink uppercase leading-6 tracking-widest group-hover:-translate-y-0.5 transition-transform duration-300">Coworking</div>
               <span className="absolute bottom-2 left-1/2 -translate-x-1/2 w-0 h-0.5 bg-white rounded-full group-hover:w-3/4 transition-all duration-300 ease-out" />
             </a>
           </div>
-          {solucoesOpen && (
+          {/* {solucoesOpen && (
             <div className="absolute top-full left-1/2 -translate-x-1/2 bg-neutral-800 rounded-2xl px-4 py-4 grid grid-cols-2 gap-3 z-[9999] border border-white/15 shadow-lg"
               onMouseLeave={() => setSolucoesOpen(false)}>
               <a href="#cursos-online" className="text-white text-base font-normal font-rethink uppercase leading-6 tracking-widest px-3 py-2 hover:bg-white/10 rounded-lg">Educação</a>
               <a href="#tecnologia" className="text-white text-base font-normal font-rethink uppercase leading-6 tracking-widest px-3 py-2 hover:bg-white/10 rounded-lg">Tecnologia</a>
               <a href="#eventos" className="text-white text-base font-normal font-rethink uppercase leading-6 tracking-widest px-3 py-2 hover:bg-white/10 rounded-lg">Eventos</a>
             </div>
-          )}
+          )} */}
         </div>
       </div>
       <div className="hidden md:flex justify-center items-center">
         <CTAButton pill href="https://wa.me/5588981527958">Fale com a gente</CTAButton>
-      </div>
-      <button onClick={() => { setMobileOpen(!mobileOpen); setSolucoesOpen(false); }} className="md:hidden size-10 flex justify-center items-center text-white">
+      </div>            <button onClick={() => { setMobileOpen(!mobileOpen); }} className="md:hidden size-10 flex justify-center items-center text-white">
         <svg className="size-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
           {mobileOpen ? (
             <path d="M6 18L18 6M6 6l12 12" strokeLinecap="round" />
@@ -69,7 +67,7 @@ export default function Header() {
       {mobileOpen && (
         <div className="md:hidden fixed inset-0 bg-neutral-900 z-50 flex flex-col p-6">
           <div className="flex justify-end">
-            <button onClick={() => { setMobileOpen(false); setSolucoesOpen(false); }} className="size-10 flex justify-center items-center text-white">
+            <button onClick={() => { setMobileOpen(false); }} className="size-10 flex justify-center items-center text-white">
               <svg className="size-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
                 <path d="M6 18L18 6M6 6l12 12" strokeLinecap="round" />
               </svg>
@@ -79,7 +77,7 @@ export default function Header() {
             <a href="/" className="text-white text-xl font-normal font-rethink uppercase tracking-widest">Início</a>
             <a href="/quem-somos" className="text-white text-xl font-normal font-rethink uppercase tracking-widest">Quem Somos</a>
             <a href="#" className="text-white text-xl font-normal font-rethink uppercase tracking-widest">Trabalhe conosco</a>
-            <div>
+            {/* <div>
               <button onClick={() => setSolucoesOpen(!solucoesOpen)} className="flex items-center gap-2 text-white text-xl font-normal font-rethink uppercase tracking-widest">
                 Soluções
                 <svg className={`size-4 text-white transition-transform duration-300 ${solucoesOpen ? "rotate-180" : ""}`} viewBox="0 0 16 16" fill="none">
@@ -93,7 +91,7 @@ export default function Header() {
                   <a href="#eventos" className="text-white/80 text-base font-normal font-rethink uppercase tracking-widest hover:text-white">Eventos</a>
                 </div>
               )}
-            </div>
+            </div> */}
             <a href="/coworking" className="text-white text-xl font-normal font-rethink uppercase tracking-widest">Coworking</a>
             <div className="mt-4">
               <CTAButton pill href="https://wa.me/5588981527958">Fale com a gente</CTAButton>
